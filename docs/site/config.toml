@@ -2,5 +2,6 @@ baseurl = "https://listmail.app/"
 languageCode = "en-us"
 title = "listmail - Free and open source self-hosted newsletter, mailing list manager, and transactional mails"
 
+
 [taxonomies]
   tag = "tags"
