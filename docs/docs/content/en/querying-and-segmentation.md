@@ -34,11 +34,11 @@ Here's a sample JSON map of attributes assigned to an imaginary subscriber.
 }
 ```
 
-![listmail screenshot](images/edit-subscriber.png)
+![listmail screenshot](../images/edit-subscriber.png)
 
 ## Sample SQL query expressions
 
-![listmail](images/query-subscribers.png)
+![listmail](../images/query-subscribers.png)
 
 #### Find a subscriber by e-mail
 

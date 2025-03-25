@@ -4,14 +4,16 @@ theme:
   # custom_dir: "mkdocs-material/material"
   logo: "images/favicon.png"
   favicon: "images/favicon.png"
-  language: "en"
+  icon:
+    previous: fontawesome/solid/angle-left
+    next: fontawesome/solid/angle-right
+  language: "zh"
   font:
     text: 'Inter'
     weights: 400
   direction: 'ltr'
-  extra:
   search:
-    language: 'en'
+    language: 'zh'
   feature:
     tabs: true
   features:
@@ -20,8 +22,20 @@ theme:
     - content.code.copy
 
   palette:
-    primary: "white"
-    accent: "red"
+    - scheme: default
+      primary: "white"
+      accent: "green"
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: "black"
+      accent: "green"
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to light mode
+
 
 site_dir: _out
 docs_dir: content
@@ -32,7 +46,15 @@ markdown_extensions:
   - pymdownx.superfences
   - toc:
       permalink: true
-
+extra:
+  homepage: https://listmail.naraiu.cc
+  alternate:
+    - name: English
+      link: /en/
+      lang: en
+    - name: 中文
+      link: /zh/
+      lang: zh
 extra_css:
   - "static/style.css"
 
@@ -63,9 +85,9 @@ nav:
     - "Campaigns": apis/campaigns.md
     - "Media": apis/media.md
     - "Templates": apis/templates.md
-    - "Transactional": apis/transactional.md
+#    - "Transactional": apis/transactional.md
     - "Bounces": apis/bounces.md
-  - "Maintenance":
-    - "Performance": maintenance/performance.md
-  - "Contributions":
-    - "Developer setup": developer-setup.md
+#  - "Maintenance":
+#    - "Performance": maintenance/performance.md
+#  - "Contributions":
+#    - "Developer setup": developer-setup.md

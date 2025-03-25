@@ -28,5 +28,5 @@ As an example:
 }
 ```
 
-![Archive campaign](images/archived-campaign-metadata.png)
+![Archive campaign](../images/archived-campaign-metadata.png)
 
