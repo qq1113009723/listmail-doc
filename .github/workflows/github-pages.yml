@@ -47,14 +47,14 @@ jobs:
       - name: Generate Swagger UI
         uses: Legion2/swagger-ui-action@v1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.TOKEN }}
           spec-file: ./docs/swagger/collections.yaml
           output: ./docs/publish/docs/swagger
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.TOKEN }}
           publish_branch: gh-pages
           publish_dir: ./docs/publish
           cname: listmail.app
