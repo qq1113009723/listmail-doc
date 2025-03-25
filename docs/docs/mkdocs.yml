@@ -9,8 +9,8 @@ theme:
     previous: fontawesome/solid/angle-left
     next: fontawesome/solid/angle-right
   search:
-    language: 'zh'
-  language: "zh"
+    language: 'en'
+  language: "en"
   font:
     text: 'Inter'
     weights: 400
@@ -57,20 +57,33 @@ markdown_extensions:
   - pymdownx.superfences
   - toc:
       permalink: true
-extra:
-  alternate:
-    - name: English
-      link: /docs/en/
-      lang: en
-    - name: 中文
-      link: /docs/zh/
-      lang: zh
+#extra:
+#  alternate:
+#    - name: English
+#      link: /
+#      lang: en
+#    - name: 中文
+#      link: /docs/zh/
+#      lang: zh
 extra_css:
   - "static/style.css"
 
-copyright: "CC BY-SA 4.0"
+#copyright: "CC BY-SA 4.0"
+
 plugins:
   - search
+  - i18n:
+      docs_structure: folder
+      default_language: zh
+      languages:
+        - locale: zh
+          name: 中文
+          build: true
+          default: true
+        - locale: en
+          name: English
+          build: true
+
 nav:
   - "Introduction": index.md
   - "Getting Started":

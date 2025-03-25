@@ -24,6 +24,7 @@ jobs:
         with:
           python-version: 3.x
       - run: pip install mkdocs-material
+      - run: pip install mkdocs-static-i18n
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
