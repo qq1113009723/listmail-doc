@@ -81,9 +81,10 @@ plugins:
           build: true
           default: true
           nav_translations:
-            Introduction: "介绍"
-            Getting Started: "开始"
-            Getting Started/Installation: "安装"
+            - Introduction: "介绍"
+            - Getting Started: "开始"
+            - Getting Started.Installation: "介绍"
+
         - locale: en
           name: English
           build: true
