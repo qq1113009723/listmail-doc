@@ -1,4 +1,5 @@
 site_name: listmail / Documentation
+site_url: https://listmail.naraiu.cc/docs
 theme:
   name: material
   # custom_dir: "mkdocs-material/material"
@@ -14,13 +15,22 @@ theme:
     text: 'Inter'
     weights: 400
   direction: 'ltr'
-
   feature:
     tabs: true
   features:
+    - navigation.path
     - navigation.indexes
     - navigation.sections
+    - navigation.top
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.tracking
     - content.code.copy
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
 
   palette:
     - scheme: default
@@ -48,7 +58,6 @@ markdown_extensions:
   - toc:
       permalink: true
 extra:
-  homepage: https://listmail.naraiu.cc
   alternate:
     - name: English
       link: /docs/en/
@@ -60,7 +69,8 @@ extra_css:
   - "static/style.css"
 
 copyright: "CC BY-SA 4.0"
-
+plugins:
+  - search
 nav:
   - "Introduction": index.md
   - "Getting Started":
