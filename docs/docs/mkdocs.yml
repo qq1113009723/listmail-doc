@@ -7,13 +7,14 @@ theme:
   icon:
     previous: fontawesome/solid/angle-left
     next: fontawesome/solid/angle-right
+  search:
+    language: 'zh'
   language: "zh"
   font:
     text: 'Inter'
     weights: 400
   direction: 'ltr'
-  search:
-    language: 'zh'
+
   feature:
     tabs: true
   features:
@@ -50,10 +51,10 @@ extra:
   homepage: https://listmail.naraiu.cc
   alternate:
     - name: English
-      link: /en/
+      link: /docs/en/
       lang: en
     - name: 中文
-      link: /zh/
+      link: /docs/zh/
       lang: zh
 extra_css:
   - "static/style.css"
