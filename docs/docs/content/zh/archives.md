@@ -1,23 +1,22 @@
-# Archives
+# 存档
 
-A global public archive is maintained on the public web interface. It can be
-enabled under Settings -> Settings -> General -> Enable public mailing list
-archive.
+在公共web界面上维护着一个全局公共存档。你可以在 “设置” -> “设置” -> “常规” -> 
+“启用公共邮件列表存档” 选项下启用它。
 
-To make a campaign available in the public archive (provided it has been
-enabled in the settings as described above), enable the option
-'Publish to public archive' under Campaigns -> Create new -> Archive.
+要使某个营销活动在公共存档中可见（前提是已按上述描述在设置中启用了公共存档功能），
+请在 “营销活动” -> “新建” -> “存档” 下启用 “发布到公共存档” 选项。
 
-When using template variables that depend on subscriber data (such as any
-template variable referencing `.Subscriber`), such data must be supplied
-as 'Campaign metadata', which is a JSON object that will be used in place
-of `.Subscriber` when rendering the archive template and content.
+当使用依赖于订阅用户数据的模板变量时（例如任何引用 `.Subscriber` 的模板变量），
+此类数据必须作为 “营销活动元数据” 提供，这是一个 JSON 对象，
+在渲染存档模板和内容时，它将用来替代 `.Subscriber`
 
-When individual subscriber tracking is enabled, TrackLink requires that a UUID
-of an existing user is provided as part of the campaign metadata. Any clicks on
-a TrackLink from the archived campaign will be counted towards that subscriber.
+当启用了对单个订阅用户的追踪功能时， “追踪链接（TrackLink）” 要求将现有用户的通用
+唯一识别码（UUID）作为营销活动元数据的一部分提供。来自已存档营销活动的追踪链接的任何点击操作，
+都将记录到该订阅用户的点击数据中。
 
-As an example:
+
+举例如下：
+
 
 ```json
 {
