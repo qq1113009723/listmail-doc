@@ -6,4 +6,5 @@ This repository contains the source for the static website https://listmail.app
 
 - Documentation is in `docs` and is built with mkdocs (inside `docs`, run `mkdocs serve` to preview after running `pip install -r requirements.txt`)
 
+
 - `i18n` directory has the static UI for i18n translations: https://listmail.app/i18n
