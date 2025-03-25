@@ -1,13 +1,11 @@
-# Concepts
+# 概念
 
-## Subscriber
+## 订阅者
 
-A subscriber is a recipient identified by an e-mail address and name. Subscribers receive e-mails that are sent from listmail. A subscriber can be added to any number of lists. Subscribers who are not a part of any lists are considered *orphan* records.
+订阅者是指通过电子邮件地址和姓名识别的接收者。订阅者会收到从 listmail 发送的电子邮件。一个订阅者可以添加到任意数量的列表中。未加入任何列表的订阅者被视为孤立记录。
+### 属性
 
-### Attributes
-
-Attributes are arbitrary properties attached to a subscriber in addition to their e-mail and name. They are represented as a JSON map. It is not necessary for all subscribers to have the same attributes. Subscribers can be [queried and segmented](querying-and-segmentation.md) into lists based on their attributes, and the attributes can be inserted into the e-mails sent to them. For example:
-
+属性是附加在订阅者身上的任意属性，除了电子邮件和姓名之外。它们还以 JSON 映射的形式表示。并非所有订阅者都需要具有属性。可以根据订阅者的属性查询和分段到不同的列表中，并将属性插入发送给他们的电子邮件中。例如：
 ```json
 {
   "city": "Bengaluru",
@@ -22,38 +20,37 @@ Attributes are arbitrary properties attached to a subscriber in addition to thei
 }
 ```
 
-### Subscription statuses
+### 订阅状态
 
-A subscriber can be added to one or more lists, and each such relationship can have one of these statuses.
+订阅者可以被添加到一个或多个列表中，每个这样的关系可以具有这些状态之一。
 
-| Status        | Description                                                                       |
-| ------------- | --------------------------------------------------------------------------------- |
-| `unconfirmed` | The subscriber was added to the list directly without their explicit confirmation. Nonetheless, the subscriber will receive campaign messages sent to single optin campaigns. |
-| `confirmed`   | The subscriber confirmed their subscription by clicking on 'accept' in the confirmation e-mail. Only confirmed subscribers in opt-in lists will receive campaign messages send to the list.                                       |
-| `unsubscribed` | The subscriber is unsubscribed from the list and will not receive any campaign messages sent to the list.
-
-
-### Segmentation
-
-Segmentation is the process of filtering a large list of subscribers into a smaller group based on arbitrary conditions, primarily based on their attributes. For instance, if an e-mail needs to be sent subscribers who live in a particular city, given their city is described in their attributes, it's possible to quickly filter them out into a new list and e-mail them. [Learn more](querying-and-segmentation.md).
-
-## List
-
-A list (or a _mailing list_) is a collection of subscribers grouped under a name, for instance, _clients_. Lists are used to organise subscribers and send e-mails to specific groups. A list can be single optin or double optin. Subscribers added to double optin lists have to explicitly accept the subscription by clicking on the confirmation e-mail they receive. Until then, they do not receive campaign messages.
-
-## Campaign
-
-A campaign is an e-mail (or any other kind of messages) that is sent to one or more lists.
+| 状态             | 说明                                                                                                                                                                                          |
+|----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `unconfirmed`  | 订阅者是在没有获得其明确确认的情况下直接被添加到列表中的。尽管如此，该订阅者仍会收到发送给 “单次确认式” 营销活动的营销活动信息。                                                                                                                          |
+| `confirmed`    | 订阅者通过点击确认电子邮件中的 “接受” 按钮来确认了他们的订阅。只有在选择加入列表中已确认的订阅者才会收到发送到该列表的营销活动信息。 |
+| `unsubscribed` | 该订阅者已从列表中退订，将不会收到发送至该列表的任何营销活动信息。                                                                                   
 
 
-## Transactional message
+### 分段
 
-A transactional message is an arbitrary message sent to a subscriber using the transactional message API. For example a welcome e-mail on signing up to a service; an order confirmation e-mail on purchasing an item; a password reset e-mail when a user initiates an online account recovery process.
+分段是指根据任意条件（主要基于订阅者的属性），将大量的订阅者列表筛选成一个较小群体的过程。例如，如果需要向居住在某个特定城市的订阅者发送电子邮件（假设他们所在城市的信息在其属性中有描述)，那么就可以快速地将这些订阅者筛选出来，组成一个新的列表，然后向他们发送邮件。 [Learn more](querying-and-segmentation.md).
+
+## 列表
+
+列表（或 “邮件列表”）是指一群订阅者的集合，这些订阅者归在一个名称之下，例如 “客户”。列表用于对订阅者进行组织管理，以及向特定的群体发送电子邮件。一个列表可以是 “单次确认式” 或 “双次确认式” 的。被添加到 “双次确认式” 列表中的订阅者必须通过点击他们所收到的确认电子邮件来明确接受订阅。在确认之前，他们不会收到营销活动的邮件信息。
+## 营销活动
+
+营销活动是指发送给一个或多个邮件列表的一封电子邮件（或任何其他类型的信息）。
 
 
-## Template
+[//]: # (## 事物性消息)
 
-A template is a re-usable HTML design that can be used across campaigns and when sending arbitrary transactional messages. Most commonly, templates have standard header and footer areas with logos and branding elements, where campaign content is inserted in the middle. listmail supports [Go template](https://gowebexamples.com/templates/) expressions that lets you create powerful, dynamic HTML templates. [Learn more](templating.md).
+[//]: # ()
+[//]: # (事务性消息是通过事务性消息应用程序编程接口（API）发送给订阅者的任意一种消息。例如，当用户注册一项服务时发送的欢迎电子邮件；用户购买商品时发送的订单确认电子邮件；当用户启动在线账户找回流程时发送的密码重置电子邮件。)
+
+## 模板
+
+模板是一种可重复使用的（HTML）设计，可用于各类营销活动。通常情况下，模板包含徽标和品牌元素的标准页眉和页脚区域，而营销活动的内容则插入到中间部分。listmail 支持您能够创建功能强大、动态的 HTML 模板 [Learn more](templating.md).
 
 ## Messenger
 
