@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://listmail.naraiu.cc/docs/en/messengers/">
+        <link rel="canonical" href="https://app.stmails.cn/docs/en/messengers/">
       
       
         <link rel="prev" href="../bounces/">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Messengers - listmail / Documentation</title>
+        <title>Messengers - stmails / Documentation</title>
       
     
     
@@ -92,7 +92,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../" title="listmail / Documentation" class="md-header__button md-logo" aria-label="listmail / Documentation" data-md-component="logo">
+    <a href="../" title="stmails / Documentation" class="md-header__button md-logo" aria-label="stmails / Documentation" data-md-component="logo">
       
   <img src="../../images/favicon.png" alt="logo">
 
@@ -105,7 +105,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            listmail / Documentation
+            stmails / Documentation
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -245,12 +245,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../" title="listmail / Documentation" class="md-nav__button md-logo" aria-label="listmail / Documentation" data-md-component="logo">
+    <a href="../" title="stmails / Documentation" class="md-nav__button md-logo" aria-label="stmails / Documentation" data-md-component="logo">
       
   <img src="../../images/favicon.png" alt="logo">
 
     </a>
-    listmail / Documentation
+    stmails / Documentation
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -446,7 +446,7 @@
             
   
   <span class="md-ellipsis">
-    Using listmail
+    Using stmails
     
   </span>
   
@@ -457,7 +457,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            Using listmail
+            Using stmails
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1034,13 +1034,13 @@
 
 
 <h1 id="messengers">Messengers<a class="headerlink" href="#messengers" title="Permanent link">&para;</a></h1>
-<p>listmail supports multiple custom messaging backends in additional to the default SMTP e-mail backend, enabling not just e-mail campaigns, but arbitrary message campaigns such as SMS, FCM notifications etc.</p>
+<p>stmails supports multiple custom messaging backends in additional to the default SMTP e-mail backend, enabling not just e-mail campaigns, but arbitrary message campaigns such as SMS, FCM notifications etc.</p>
 <p>A <em>Messenger</em> is a web service that accepts a campaign message pushed to it as a JSON request, which the service can in turn broadcast as SMS, FCM etc. Messengers are registered in the <em>Settings -&gt; Messengers</em> UI, and can be selected on individual campaigns.</p>
 <p>Messengers support optional BasicAuth authentication. <code>Plain text</code> format for campaign content is ideal for messengers such as SMS and FCM.</p>
-<p>When a campaign starts, listmail POSTs messages in the following format to the selected messenger's endpoint. The endpoint should return a <code>200 OK</code> response in case of a successful request.</p>
+<p>When a campaign starts, stmails POSTs messages in the following format to the selected messenger's endpoint. The endpoint should return a <code>200 OK</code> response in case of a successful request.</p>
 <p>The address required to broadcast the message, for instance, a phone number or an FCM ID, is expected to be stored and relayed as <a href="../concepts/#attributes">subscriber attributes</a>. </p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;subject&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Welcome to listmail&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;subject&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Welcome to stmails&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The message body&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;content_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;plain&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;recipients&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span>
@@ -1072,23 +1072,23 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><a href="https://github.com/joeirimpan/listmail-messenger">listmail-messenger</a></td>
+<td style="text-align: left;"><a href="https://github.com/joeirimpan/stmails-messenger">stmails-messenger</a></td>
 <td style="text-align: left;">AWS Pinpoint SMS</td>
 </tr>
 <tr>
-<td style="text-align: left;"><a href="https://github.com/antandros/listmail-verimor-gateway">listmail-verimor-gateway</a></td>
+<td style="text-align: left;"><a href="https://github.com/antandros/stmails-verimor-gateway">stmails-verimor-gateway</a></td>
 <td style="text-align: left;">Verimor</td>
 </tr>
 <tr>
-<td style="text-align: left;"><a href="https://github.com/tkawczynski/listmail-mailersend">listmail-mailersend</a></td>
+<td style="text-align: left;"><a href="https://github.com/tkawczynski/stmails-mailersend">stmails-mailersend</a></td>
 <td style="text-align: left;">Mailersend</td>
 </tr>
 <tr>
-<td style="text-align: left;"><a href="https://github.com/Codepowercode/listmail-novu-messenger">listmail-novu-messenger</a></td>
+<td style="text-align: left;"><a href="https://github.com/Codepowercode/stmails-novu-messenger">stmails-novu-messenger</a></td>
 <td style="text-align: left;">Novu</td>
 </tr>
 <tr>
-<td style="text-align: left;"><a href="https://github.com/shyamkrishna21/listmail-push-messenger">listmail-push-messenger</a></td>
+<td style="text-align: left;"><a href="https://github.com/shyamkrishna21/stmails-push-messenger">stmails-push-messenger</a></td>
 <td style="text-align: left;">Google FCM</td>
 </tr>
 </tbody>

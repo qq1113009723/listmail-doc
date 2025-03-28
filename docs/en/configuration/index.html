@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://listmail.naraiu.cc/docs/en/configuration/">
+        <link rel="canonical" href="https://app.stmails.cn/docs/en/configuration/">
       
       
         <link rel="prev" href="../installation/">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Configuration - listmail / Documentation</title>
+        <title>Configuration - stmails / Documentation</title>
       
     
     
@@ -92,7 +92,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../" title="listmail / Documentation" class="md-header__button md-logo" aria-label="listmail / Documentation" data-md-component="logo">
+    <a href="../" title="stmails / Documentation" class="md-header__button md-logo" aria-label="stmails / Documentation" data-md-component="logo">
       
   <img src="../../images/favicon.png" alt="logo">
 
@@ -105,7 +105,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            listmail / Documentation
+            stmails / Documentation
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -245,12 +245,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../" title="listmail / Documentation" class="md-nav__button md-logo" aria-label="listmail / Documentation" data-md-component="logo">
+    <a href="../" title="stmails / Documentation" class="md-nav__button md-logo" aria-label="stmails / Documentation" data-md-component="logo">
       
   <img src="../../images/favicon.png" alt="logo">
 
     </a>
-    listmail / Documentation
+    stmails / Documentation
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -688,7 +688,7 @@
             
   
   <span class="md-ellipsis">
-    Using listmail
+    Using stmails
     
   </span>
   
@@ -699,7 +699,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            Using listmail
+            Using stmails
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1420,9 +1420,9 @@
 <h1 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h1>
 <h3 id="toml-configuration-file">TOML Configuration file<a class="headerlink" href="#toml-configuration-file" title="Permanent link">&para;</a></h3>
 <p>One or more TOML files can be read by passing <code>--config config.toml</code> multiple times. Apart from a few low level configuration variables and the database configuration, all other settings can be managed from the <code>Settings</code> dashboard on the admin UI.</p>
-<p>To generate a new sample configuration file, run <code>--listmail --new-config</code></p>
+<p>To generate a new sample configuration file, run <code>--stmails --new-config</code></p>
 <h3 id="environment-variables">Environment variables<a class="headerlink" href="#environment-variables" title="Permanent link">&para;</a></h3>
-<p>Variables in config.toml can also be provided as environment variables prefixed by <code>listmail_</code> with periods replaced by <code>__</code> (double underscore). To start listmail purely with environment variables without a configuration file, set the environment variables and pass the config flag as <code>--config=""</code>.</p>
+<p>Variables in config.toml can also be provided as environment variables prefixed by <code>stmails_</code> with periods replaced by <code>__</code> (double underscore). To start stmails purely with environment variables without a configuration file, set the environment variables and pass the config flag as <code>--config=""</code>.</p>
 <p>Example:</p>
 <table>
 <thead>
@@ -1433,31 +1433,31 @@
 </thead>
 <tbody>
 <tr>
-<td><code>listmail_app__address</code></td>
+<td><code>stmails_app__address</code></td>
 <td>"0.0.0.0:9000"</td>
 </tr>
 <tr>
-<td><code>listmail_db__host</code></td>
+<td><code>stmails_db__host</code></td>
 <td>db</td>
 </tr>
 <tr>
-<td><code>listmail_db__port</code></td>
+<td><code>stmails_db__port</code></td>
 <td>9432</td>
 </tr>
 <tr>
-<td><code>listmail_db__user</code></td>
-<td>listmail</td>
+<td><code>stmails_db__user</code></td>
+<td>stmails</td>
 </tr>
 <tr>
-<td><code>listmail_db__password</code></td>
-<td>listmail</td>
+<td><code>stmails_db__password</code></td>
+<td>stmails</td>
 </tr>
 <tr>
-<td><code>listmail_db__database</code></td>
-<td>listmail</td>
+<td><code>stmails_db__database</code></td>
+<td>stmails</td>
 </tr>
 <tr>
-<td><code>listmail_db__ssl_mode</code></td>
+<td><code>stmails_db__ssl_mode</code></td>
 <td>disable</td>
 </tr>
 </tbody>
@@ -1537,23 +1537,23 @@
 </table>
 <h2 id="media-uploads">Media uploads<a class="headerlink" href="#media-uploads" title="Permanent link">&para;</a></h2>
 <h4 id="using-filesystem">Using filesystem<a class="headerlink" href="#using-filesystem" title="Permanent link">&para;</a></h4>
-<p>When configuring <code>docker</code> volume mounts for using filesystem media uploads, you can follow either of two approaches. <a href="https://github.com/knadh/listmail/issues/1169#issuecomment-1674475945">The second option may be necessary if</a> your setup requires you to use <code>sudo</code> for docker commands. </p>
+<p>When configuring <code>docker</code> volume mounts for using filesystem media uploads, you can follow either of two approaches. <a href="https://github.com/knadh/stmails/issues/1169#issuecomment-1674475945">The second option may be necessary if</a> your setup requires you to use <code>sudo</code> for docker commands. </p>
 <p>After making any changes you will need to run <code>sudo docker compose stop ; sudo docker compose up</code>. </p>
-<p>And under <code>https://listmail.mysite.com/admin/settings</code> you put <code>/listmail/uploads</code>. </p>
+<p>And under <code>https://stmails.mysite.com/admin/settings</code> you put <code>/stmails/uploads</code>. </p>
 <h4 id="using-volumes">Using volumes<a class="headerlink" href="#using-volumes" title="Permanent link">&para;</a></h4>
 <p>Using <code>docker volumes</code>, you can specify the name of volume and destination for the files to be uploaded inside the container.</p>
 <div class="highlight"><pre><span></span><code>app:
     volumes:
       - type: volume
-        source: listmail-uploads
-        target: /listmail/uploads
+        source: stmails-uploads
+        target: /stmails/uploads
 
 volumes:
-  listmail-uploads:
+  stmails-uploads:
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This volume is managed by <code>docker</code> itself, and you can see find the host path with <code>docker volume inspect listmail_listmail-uploads</code>.</p>
+<p>This volume is managed by <code>docker</code> itself, and you can see find the host path with <code>docker volume inspect stmails_stmails-uploads</code>.</p>
 </div>
 <h4 id="using-bind-mounts">Using bind mounts<a class="headerlink" href="#using-bind-mounts" title="Permanent link">&para;</a></h4>
 <p><div class="highlight"><pre><span></span><code>  app:
@@ -1563,30 +1563,30 @@ volumes:
 Eg:
 <div class="highlight"><pre><span></span><code>  app:
     volumes:
-      - ./data/uploads:/listmail/uploads
+      - ./data/uploads:/stmails/uploads
 </code></pre></div>
 The files will be available inside <code>/data/uploads</code> directory on the host machine.</p>
 <p>To use the default <code>uploads</code> folder:
 <div class="highlight"><pre><span></span><code>  app:
     volumes:
-      - ./uploads:/listmail/uploads
+      - ./uploads:/stmails/uploads
 </code></pre></div></p>
 <h2 id="logs">Logs<a class="headerlink" href="#logs" title="Permanent link">&para;</a></h2>
 <h3 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h3>
 <p>https://docs.docker.com/engine/reference/commandline/logs/
 <div class="highlight"><pre><span></span><code>sudo docker logs -f
-sudo docker logs listmail_app -t
-sudo docker logs listmail_db -t
+sudo docker logs stmails_app -t
+sudo docker logs stmails_db -t
 sudo docker logs --help
 </code></pre></div>
-Container info: <code>sudo docker inspect listmail_listmail</code></p>
+Container info: <code>sudo docker inspect stmails_stmails</code></p>
 <p>Docker logs to <code>/dev/stdout</code> and <code>/dev/stderr</code>. The logs are collected by the docker daemon and stored in your node's host path (by default). The same can be configured (/etc/docker/daemon.json) in your docker daemon settings to setup other logging drivers, logrotate policy and more, which you can read about <a href="https://docs.docker.com/config/containers/logging/configure/">here</a>.</p>
 <h3 id="binary">Binary<a class="headerlink" href="#binary" title="Permanent link">&para;</a></h3>
-<p>listmail logs to <code>stdout</code>, which is usually not saved to any file. To save listmail logs to a file use <code>./listmail &gt; listmail.log</code>.</p>
-<p>Settings -&gt; Logs in admin shows the last 1000 lines of the standard log output but gets erased when listmail is restarted.</p>
-<p>For the <a href="https://github.com/knadh/listmail/blob/master/listmail%40.service">service file</a>, you can use <code>ExecStart=/bin/bash -ce "exec /usr/bin/listmail --config /etc/listmail/config.toml --static-dir /etc/listmail/static &gt;&gt;/etc/listmail/listmail.log 2&gt;&amp;1"</code> to create a log file that persists after restarts. <a href="https://github.com/knadh/listmail/issues/1462#issuecomment-1868501606">More info</a>.</p>
+<p>stmails logs to <code>stdout</code>, which is usually not saved to any file. To save stmails logs to a file use <code>./stmails &gt; stmails.log</code>.</p>
+<p>Settings -&gt; Logs in admin shows the last 1000 lines of the standard log output but gets erased when stmails is restarted.</p>
+<p>For the <a href="https://github.com/knadh/stmails/blob/master/stmails%40.service">service file</a>, you can use <code>ExecStart=/bin/bash -ce "exec /usr/bin/stmails --config /etc/stmails/config.toml --static-dir /etc/stmails/static &gt;&gt;/etc/stmails/stmails.log 2&gt;&amp;1"</code> to create a log file that persists after restarts. <a href="https://github.com/knadh/stmails/issues/1462#issuecomment-1868501606">More info</a>.</p>
 <h2 id="time-zone">Time zone<a class="headerlink" href="#time-zone" title="Permanent link">&para;</a></h2>
-<p>To change listmail's time zone (logs, etc.) edit <code>docker-compose.yml</code>:
+<p>To change stmails's time zone (logs, etc.) edit <code>docker-compose.yml</code>:
 <div class="highlight"><pre><span></span><code>environment:
     - TZ=Etc/UTC
 </code></pre></div>

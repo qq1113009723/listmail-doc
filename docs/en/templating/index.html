@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://listmail.naraiu.cc/docs/en/templating/">
+        <link rel="canonical" href="https://app.stmails.cn/docs/en/templating/">
       
       
         <link rel="prev" href="../concepts/">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Templating - listmail / Documentation</title>
+        <title>Templating - stmails / Documentation</title>
       
     
     
@@ -92,7 +92,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../" title="listmail / Documentation" class="md-header__button md-logo" aria-label="listmail / Documentation" data-md-component="logo">
+    <a href="../" title="stmails / Documentation" class="md-header__button md-logo" aria-label="stmails / Documentation" data-md-component="logo">
       
   <img src="../../images/favicon.png" alt="logo">
 
@@ -105,7 +105,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            listmail / Documentation
+            stmails / Documentation
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -245,12 +245,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../" title="listmail / Documentation" class="md-nav__button md-logo" aria-label="listmail / Documentation" data-md-component="logo">
+    <a href="../" title="stmails / Documentation" class="md-nav__button md-logo" aria-label="stmails / Documentation" data-md-component="logo">
       
   <img src="../../images/favicon.png" alt="logo">
 
     </a>
-    listmail / Documentation
+    stmails / Documentation
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -446,7 +446,7 @@
             
   
   <span class="md-ellipsis">
-    Using listmail
+    Using stmails
     
   </span>
   
@@ -457,7 +457,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            Using listmail
+            Using stmails
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1239,7 +1239,7 @@
 
 <h1 id="templating">Templating<a class="headerlink" href="#templating" title="Permanent link">&para;</a></h1>
 <p>A template is a re-usable HTML design that can be used across campaigns and transactional messages. Most commonly, templates have standard header and footer areas with logos and branding elements, where campaign content is inserted in the middle.</p>
-<p>listmail supports <a href="https://pkg.go.dev/text/template">Go template</a> expressions that lets you create powerful, dynamic HTML templates. It also integrates 100+ useful <a href="https://masterminds.github.io/sprig/">Sprig template functions</a>.</p>
+<p>stmails supports <a href="https://pkg.go.dev/text/template">Go template</a> expressions that lets you create powerful, dynamic HTML templates. It also integrates 100+ useful <a href="https://masterminds.github.io/sprig/">Sprig template functions</a>.</p>
 <h2 id="campaign-templates">Campaign templates<a class="headerlink" href="#campaign-templates" title="Permanent link">&para;</a></h2>
 <p>Campaign templates are used in an e-mail campaigns. These template are created and managed on the UI under <code>Campaigns -&gt; Templates</code>, and are selected when creating new campaigns.</p>
 <h2 id="transactional-templates">Transactional templates<a class="headerlink" href="#transactional-templates" title="Permanent link">&para;</a></h2>
@@ -1363,7 +1363,7 @@
 </tbody>
 </table>
 <h3 id="sprig-functions">Sprig functions<a class="headerlink" href="#sprig-functions" title="Permanent link">&para;</a></h3>
-<p>listmail integrates the Sprig library that offers 100+ utility functions for working with strings, numbers, dates etc. that can be used in templating. Refer to the <a href="https://masterminds.github.io/sprig/">Sprig documentation</a> for the full list of functions.</p>
+<p>stmails integrates the Sprig library that offers 100+ utility functions for working with strings, numbers, dates etc. that can be used in templating. Refer to the <a href="https://masterminds.github.io/sprig/">Sprig documentation</a> for the full list of functions.</p>
 <h3 id="example-template">Example template<a class="headerlink" href="#example-template" title="Permanent link">&para;</a></h3>
 <p>The expression <code>{{ template "content" . }}</code> should appear exactly once in every template denoting the spot where an e-mail's content is inserted. Here's a sample HTML e-mail that has a fixed header and footer that inserts the content in the middle.</p>
 <div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
@@ -1436,10 +1436,10 @@ Here is a link for you to click that will be tracked.
 </code></pre></div>
 <p>The above example uses an <code>if</code> condition to show one of two messages depending on the value of a subscriber attribute. Many such dynamic expressions are possible with Go templating expressions.</p>
 <h2 id="system-templates">System templates<a class="headerlink" href="#system-templates" title="Permanent link">&para;</a></h2>
-<p>System templates are used for rendering public user-facing pages such as the subscription management page, and in automatically generated system e-mails such as the opt-in confirmation e-mail. These are bundled into listmail but can be customized by copying the <a href="https://github.com/knadh/listmail/tree/master/static">static directory</a> locally, and passing its path to listmail with the <code>./listmail --static-dir=your/custom/path</code> flag.</p>
+<p>System templates are used for rendering public user-facing pages such as the subscription management page, and in automatically generated system e-mails such as the opt-in confirmation e-mail. These are bundled into stmails but can be customized by copying the <a href="https://github.com/knadh/stmails/tree/master/static">static directory</a> locally, and passing its path to stmails with the <code>./stmails --static-dir=your/custom/path</code> flag.</p>
 <p>You can fetch the static files with:<br>
-<code>mkdir -p /home/ubuntu/listmail/static ; wget -O - https://github.com/knadh/listmail/archive/master.tar.gz | tar xz -C /home/ubuntu/listmail/static --strip=2 "listmail-master/static"</code></p>
-<p><a href="https://yasoob.me/posts/setting-up-listmail-opensource-newsletter-mailing/#custom-static-files">Docker example</a>, <a href="https://github.com/knadh/listmail/blob/master/listmail-simple.service">binary example</a>.</p>
+<code>mkdir -p /home/ubuntu/stmails/static ; wget -O - https://github.com/knadh/stmails/archive/master.tar.gz | tar xz -C /home/ubuntu/stmails/static --strip=2 "stmails-master/static"</code></p>
+<p><a href="https://yasoob.me/posts/setting-up-stmails-opensource-newsletter-mailing/#custom-static-files">Docker example</a>, <a href="https://github.com/knadh/stmails/blob/master/stmails-simple.service">binary example</a>.</p>
 <h3 id="public-pages">Public pages<a class="headerlink" href="#public-pages" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -1512,7 +1512,7 @@ Here is a link for you to click that will be tracked.
 </tr>
 <tr>
 <td><code>default.tpl</code></td>
-<td>Default campaign template that is created in Campaigns -&gt; Templates when listmail is first installed. This is not used after that.</td>
+<td>Default campaign template that is created in Campaigns -&gt; Templates when stmails is first installed. This is not used after that.</td>
 </tr>
 </tbody>
 </table>

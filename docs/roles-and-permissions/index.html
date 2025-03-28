@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://listmail.naraiu.cc/docs/roles-and-permissions/">
+        <link rel="canonical" href="https://app.stmails.cn/docs/roles-and-permissions/">
       
       
         <link rel="prev" href="../external-integration/">
@@ -22,7 +22,7 @@
     
     
       
-        <title>用户角色和权限 - listmail / 文档</title>
+        <title>用户角色和权限 - stmails / 文档</title>
       
     
     
@@ -92,7 +92,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href=".." title="listmail / 文档" class="md-header__button md-logo" aria-label="listmail / 文档" data-md-component="logo">
+    <a href=".." title="stmails / 文档" class="md-header__button md-logo" aria-label="stmails / 文档" data-md-component="logo">
       
   <img src="../images/favicon.png" alt="logo">
 
@@ -105,7 +105,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            listmail / 文档
+            stmails / 文档
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -245,12 +245,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="listmail / 文档" class="md-nav__button md-logo" aria-label="listmail / 文档" data-md-component="logo">
+    <a href=".." title="stmails / 文档" class="md-nav__button md-logo" aria-label="stmails / 文档" data-md-component="logo">
       
   <img src="../images/favicon.png" alt="logo">
 
     </a>
-    listmail / 文档
+    stmails / 文档
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -446,7 +446,7 @@
             
   
   <span class="md-ellipsis">
-    使用 listmail
+    使用 stmails
     
   </span>
   
@@ -457,7 +457,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            使用 listmail
+            使用 stmails
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1065,7 +1065,7 @@
 
   <h1>用户角色和权限</h1>
 
-<p>listmail supports (&gt;= v4.0.0) creating systems users with granular permissions to various features, including list-specific permissions. Users can login with a username and password, or via an OIDC (OpenID Connect) handshake if an auth provider is connected. Various permissions can be grouped into "user roles", which can be assigned to users. List-specific permissions can be grouped into "list roles".</p>
+<p>stmails supports (&gt;= v4.0.0) creating systems users with granular permissions to various features, including list-specific permissions. Users can login with a username and password, or via an OIDC (OpenID Connect) handshake if an auth provider is connected. Various permissions can be grouped into "user roles", which can be assigned to users. List-specific permissions can be grouped into "list roles".</p>
 <h2 id="user-roles">User roles<a class="headerlink" href="#user-roles" title="Permanent link">&para;</a></h2>
 <p>A user role is a collection of user related permissions. User roles are attached to user accounts. User roles can be managed in <code>Admin -&gt; Users -&gt; User roles</code> The permissions are described below.</p>
 <table>
@@ -1207,7 +1207,7 @@
 <h2 id="list-roles">List roles<a class="headerlink" href="#list-roles" title="Permanent link">&para;</a></h2>
 <p>A list role is a collection of permissions assigned per list. Each list can be assigned a view (read) or manage (update) permission. List roles are attached to user accounts. Only the lists defined in a list role is accessible by the user, be it on the admin UI or via API calls. Do note that the <code>lists:get_all</code> and <code>lists:manage_all</code> permissions in user roles override all per-list permissions.</p>
 <h2 id="api-users">API users<a class="headerlink" href="#api-users" title="Permanent link">&para;</a></h2>
-<p>A user account can be of two types, a regular user or an API user. API users are meant for intertacting with the listmail APIs programmatically. Unlike regular user accounts that have custom passwords or OIDC for authentication, API users get an automatically generated secret token.</p>
+<p>A user account can be of two types, a regular user or an API user. API users are meant for intertacting with the stmails APIs programmatically. Unlike regular user accounts that have custom passwords or OIDC for authentication, API users get an automatically generated secret token.</p>
 
 
 

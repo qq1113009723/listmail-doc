@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://listmail.naraiu.cc/docs/bounces/">
+        <link rel="canonical" href="https://app.stmails.cn/docs/bounces/">
       
       
         <link rel="prev" href="../querying-and-segmentation/">
@@ -22,7 +22,7 @@
     
     
       
-        <title>退信处理 - listmail / 文档</title>
+        <title>退信处理 - stmails / 文档</title>
       
     
     
@@ -92,7 +92,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href=".." title="listmail / 文档" class="md-header__button md-logo" aria-label="listmail / 文档" data-md-component="logo">
+    <a href=".." title="stmails / 文档" class="md-header__button md-logo" aria-label="stmails / 文档" data-md-component="logo">
       
   <img src="../images/favicon.png" alt="logo">
 
@@ -105,7 +105,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            listmail / 文档
+            stmails / 文档
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -245,12 +245,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="listmail / 文档" class="md-nav__button md-logo" aria-label="listmail / 文档" data-md-component="logo">
+    <a href=".." title="stmails / 文档" class="md-nav__button md-logo" aria-label="stmails / 文档" data-md-component="logo">
       
   <img src="../images/favicon.png" alt="logo">
 
     </a>
-    listmail / 文档
+    stmails / 文档
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -446,7 +446,7 @@
             
   
   <span class="md-ellipsis">
-    使用 listmail
+    使用 stmails
     
   </span>
   
@@ -457,7 +457,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            使用 listmail
+            使用 stmails
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1185,7 +1185,7 @@
 <span class="w">    </span>--data<span class="w"> </span><span class="s1">&#39;{&quot;email&quot;: &quot;user1@mail.com&quot;, &quot;campaign_uuid&quot;: &quot;9f86b50d-5711-41c8-ab03-bc91c43d711b&quot;, &quot;source&quot;: &quot;api&quot;, &quot;type&quot;: &quot;hard&quot;, &quot;meta&quot;: &quot;{\&quot;additional\&quot;: \&quot;info\&quot;}}&#39;</span>
 </code></pre></div>
 <h2 id="external-webhooks">External webhooks<a class="headerlink" href="#external-webhooks" title="Permanent link">&para;</a></h2>
-<p>listmail supports receiving bounce webhook events from the following SMTP providers.</p>
+<p>stmails supports receiving bounce webhook events from the following SMTP providers.</p>
 <table>
 <thead>
 <tr>
@@ -1196,22 +1196,22 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><code>https://listmail.yoursite.com/webhooks/service/ses</code></td>
+<td style="text-align: left;"><code>https://stmails.yoursite.com/webhooks/service/ses</code></td>
 <td style="text-align: left;">Amazon (AWS) SES</td>
 <td style="text-align: left;">See below</td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>https://listmail.yoursite.com/webhooks/service/sendgrid</code></td>
+<td style="text-align: left;"><code>https://stmails.yoursite.com/webhooks/service/sendgrid</code></td>
 <td style="text-align: left;">Sendgrid / Twilio Signed event webhook</td>
 <td style="text-align: left;"><a href="https://docs.sendgrid.com/for-developers/tracking-events/getting-started-event-webhook-security-features">More info</a></td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>https://listmail.yoursite.com/webhooks/service/postmark</code></td>
+<td style="text-align: left;"><code>https://stmails.yoursite.com/webhooks/service/postmark</code></td>
 <td style="text-align: left;">Postmark webhook</td>
 <td style="text-align: left;"><a href="https://postmarkapp.com/developer/webhooks/webhooks-overview">More info</a></td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>https://listmail.yoursite.com/webhooks/service/forwardemail</code></td>
+<td style="text-align: left;"><code>https://stmails.yoursite.com/webhooks/service/forwardemail</code></td>
 <td style="text-align: left;">Forward Email webhook</td>
 <td style="text-align: left;"><a href="https://forwardemail.net/en/faq#do-you-support-bounce-webhooks">More info</a></td>
 </tr>
@@ -1220,7 +1220,7 @@
 <h2 id="amazon-simple-email-service-ses">Amazon Simple Email Service (SES)<a class="headerlink" href="#amazon-simple-email-service-ses" title="Permanent link">&para;</a></h2>
 <p>If using SES as your SMTP provider, automatic bounce processing is the recommended way to maintain your <a href="https://docs.aws.amazon.com/ses/latest/dg/monitor-sender-reputation.html">sender reputation</a>. The settings below are based on Amazon's <a href="https://docs.aws.amazon.com/ses/latest/dg/send-email-concepts-deliverability.html">recommendations</a>. Please note that your sending domain must be verified in SES before proceeding.</p>
 <ol>
-<li>In listmail settings, go to the "Bounces" tab and configure the following:<ul>
+<li>In stmails settings, go to the "Bounces" tab and configure the following:<ul>
 <li>Enable bounce processing: <code>Enabled</code><ul>
 <li>Soft:<ul>
 <li>Bounce count: <code>2</code></li>
@@ -1250,11 +1250,11 @@
 </li>
 <li>Create a new subscription to that topic with the following settings:<ul>
 <li>Protocol: <code>HTTPS</code></li>
-<li>Endpoint: <code>https://listmail.yoursite.com/webhooks/service/ses</code></li>
+<li>Endpoint: <code>https://stmails.yoursite.com/webhooks/service/ses</code></li>
 <li>Enable raw message delivery: <code>Disabled</code> (unchecked)</li>
 </ul>
 </li>
-<li>SES will then make a request to your listmail instance to confirm the subscription. After a page refresh, the subscription should have a status of "Confirmed". If not, your endpoint may be incorrect or not publicly accessible.</li>
+<li>SES will then make a request to your stmails instance to confirm the subscription. After a page refresh, the subscription should have a status of "Confirmed". If not, your endpoint may be incorrect or not publicly accessible.</li>
 <li>In the AWS console, go to <a href="https://console.aws.amazon.com/ses/">Simple Email Service</a> and click "Verified identities" in the left sidebar.</li>
 <li>Click your domain and go to the "Notifications" tab.</li>
 <li>Next to "Feedback notifications", click "Edit".</li>
@@ -1263,7 +1263,7 @@
 <li>Include original email headers: <code>Enabled</code> (checked)</li>
 </ul>
 </li>
-<li>Repeat steps 6-8 for any <code>Email address</code> identities you send from using listmail</li>
+<li>Repeat steps 6-8 for any <code>Email address</code> identities you send from using stmails</li>
 <li>Bounce processing should now be working. You can test it with <a href="https://docs.aws.amazon.com/ses/latest/dg/send-an-email-from-console.html#send-email-simulator">SES simulator addresses</a>. Add them as subscribers, send them campaign previews, and ensure that the appropriate action was taken after the configured bounce count was reached.<ul>
 <li>Soft bounce: <code>ooto@simulator.amazonses.com</code></li>
 <li>Hard bounce: <code>bounce@simulator.amazonses.com</code></li>

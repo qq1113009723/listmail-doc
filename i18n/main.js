@@ -1,4 +1,4 @@
-const BASEURL = "https://raw.githubusercontent.com/knadh/listmail/master/i18n/";
+const BASEURL = "https://raw.githubusercontent.com/knadh/stmails/master/i18n/";
 const BASELANG = "en";
 
 var app = new Vue({

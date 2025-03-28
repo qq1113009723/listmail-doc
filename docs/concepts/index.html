@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://listmail.naraiu.cc/docs/concepts/">
+        <link rel="canonical" href="https://app.stmails.cn/docs/concepts/">
       
       
         <link rel="prev" href="../upgrade/">
@@ -22,7 +22,7 @@
     
     
       
-        <title>概念 - listmail / 文档</title>
+        <title>概念 - stmails / 文档</title>
       
     
     
@@ -92,7 +92,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href=".." title="listmail / 文档" class="md-header__button md-logo" aria-label="listmail / 文档" data-md-component="logo">
+    <a href=".." title="stmails / 文档" class="md-header__button md-logo" aria-label="stmails / 文档" data-md-component="logo">
       
   <img src="../images/favicon.png" alt="logo">
 
@@ -105,7 +105,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            listmail / 文档
+            stmails / 文档
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -245,12 +245,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="listmail / 文档" class="md-nav__button md-logo" aria-label="listmail / 文档" data-md-component="logo">
+    <a href=".." title="stmails / 文档" class="md-nav__button md-logo" aria-label="stmails / 文档" data-md-component="logo">
       
   <img src="../images/favicon.png" alt="logo">
 
     </a>
-    listmail / 文档
+    stmails / 文档
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -446,7 +446,7 @@
             
   
   <span class="md-ellipsis">
-    使用 listmail
+    使用 stmails
     
   </span>
   
@@ -457,7 +457,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            使用 listmail
+            使用 stmails
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1227,7 +1227,7 @@
 
 <h1 id="_1">概念<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <h2 id="_2">订阅者<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>订阅者是指通过电子邮件地址和姓名识别的接收者。订阅者会收到从 listmail 发送的电子邮件。一个订阅者可以添加到任意数量的列表中。未加入任何列表的订阅者被视为孤立记录。</p>
+<p>订阅者是指通过电子邮件地址和姓名识别的接收者。订阅者会收到从 stmails 发送的电子邮件。一个订阅者可以添加到任意数量的列表中。未加入任何列表的订阅者被视为孤立记录。</p>
 <h3 id="_3">属性<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>属性是附加在订阅者身上的任意属性，除了电子邮件和姓名之外。它们还以 JSON 映射的形式表示。并非所有订阅者都需要具有属性。可以根据订阅者的属性查询和分段到不同的列表中，并将属性插入发送给他们的电子邮件中。例如：
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
@@ -1273,15 +1273,15 @@
 <h2 id="_7">营销活动<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <p>营销活动是指发送给一个或多个邮件列表的一封电子邮件（或任何其他类型的信息）。</p>
 <h2 id="_8">模板<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
-<p>模板是一种可重复使用的（HTML）设计，可用于各类营销活动。通常情况下，模板包含徽标和品牌元素的标准页眉和页脚区域，而营销活动的内容则插入到中间部分。listmail 支持您能够创建功能强大、动态的 HTML 模板 <a href="../templating/">Learn more</a>.</p>
+<p>模板是一种可重复使用的（HTML）设计，可用于各类营销活动。通常情况下，模板包含徽标和品牌元素的标准页眉和页脚区域，而营销活动的内容则插入到中间部分。stmails 支持您能够创建功能强大、动态的 HTML 模板 <a href="../templating/">Learn more</a>.</p>
 <h2 id="messenger">Messenger<a class="headerlink" href="#messenger" title="Permanent link">&para;</a></h2>
-<p>listmail supports multiple custom messaging backends in additional to the default SMTP e-mail backend, enabling not just e-mail campaigns, but arbitrary message campaigns such as SMS, FCM notifications etc. A <em>Messenger</em> is a web service that accepts a campaign message pushed to it as a JSON request, which the service can in turn broadcast as SMS, FCM etc. <a href="../messengers/">Learn more</a>.</p>
+<p>stmails supports multiple custom messaging backends in additional to the default SMTP e-mail backend, enabling not just e-mail campaigns, but arbitrary message campaigns such as SMS, FCM notifications etc. A <em>Messenger</em> is a web service that accepts a campaign message pushed to it as a JSON request, which the service can in turn broadcast as SMS, FCM etc. <a href="../messengers/">Learn more</a>.</p>
 <h2 id="tracking-pixel">Tracking pixel<a class="headerlink" href="#tracking-pixel" title="Permanent link">&para;</a></h2>
 <p>The tracking pixel is a tiny, invisible image that is inserted into an e-mail body to track e-mail views. This allows measuring the read rate of e-mails. While this is exceedingly common in e-mail campaigns, it carries privacy implications and should be used in compliance with rules and regulations such as GDPR. It is possible to track reads anonymously without associating an e-mail read to a subscriber.</p>
 <h2 id="click-tracking">Click tracking<a class="headerlink" href="#click-tracking" title="Permanent link">&para;</a></h2>
 <p>It is possible to track the clicks on every link that is sent in an e-mail. This allows measuring the clickthrough rates of links in e-mails. While this is exceedingly common in e-mail campaigns, it carries privacy implications and should be used in compliance with rules and regulations such as GDPR. It is possible to track link clicks anonymously without associating an e-mail read to a subscriber.</p>
 <h2 id="bounce">Bounce<a class="headerlink" href="#bounce" title="Permanent link">&para;</a></h2>
-<p>A bounce occurs when an e-mail that is sent to a recipient "bounces" back for one of many reasons including the recipient address being invalid, their mailbox being full, or the recipient's e-mail service provider marking the e-mail as spam. listmail can automatically process such bounce e-mails that land in a configured POP mailbox, or via APIs of SMTP e-mail providers such as AWS SES and Sengrid. Based on settings, subscribers returning bounced e-mails can either be blocklisted or deleted automatically. <a href="../bounces/">Learn more</a>.</p>
+<p>A bounce occurs when an e-mail that is sent to a recipient "bounces" back for one of many reasons including the recipient address being invalid, their mailbox being full, or the recipient's e-mail service provider marking the e-mail as spam. stmails can automatically process such bounce e-mails that land in a configured POP mailbox, or via APIs of SMTP e-mail providers such as AWS SES and Sengrid. Based on settings, subscribers returning bounced e-mails can either be blocklisted or deleted automatically. <a href="../bounces/">Learn more</a>.</p>
 
 
 
