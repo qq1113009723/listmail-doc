@@ -1,6 +1,6 @@
 # Querying and segmenting subscribers
 
-listmail allows the writing of partial Postgres SQL expressions to query, filter, and segment subscribers.
+stmails allows the writing of partial Postgres SQL expressions to query, filter, and segment subscribers.
 
 ## Database fields
 
@@ -34,11 +34,11 @@ Here's a sample JSON map of attributes assigned to an imaginary subscriber.
 }
 ```
 
-![listmail screenshot](../images/edit-subscriber.png)
+![stmails screenshot](../images/edit-subscriber.png)
 
 ## Sample SQL query expressions
 
-![listmail](../images/query-subscribers.png)
+![stmails](../images/query-subscribers.png)
 
 #### Find a subscriber by e-mail
 

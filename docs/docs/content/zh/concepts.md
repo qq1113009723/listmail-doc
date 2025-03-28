@@ -2,7 +2,7 @@
 
 ## 订阅者
 
-订阅者是指通过电子邮件地址和姓名识别的接收者。订阅者会收到从 listmail 发送的电子邮件。一个订阅者可以添加到任意数量的列表中。未加入任何列表的订阅者被视为孤立记录。
+订阅者是指通过电子邮件地址和姓名识别的接收者。订阅者会收到从 stmails 发送的电子邮件。一个订阅者可以添加到任意数量的列表中。未加入任何列表的订阅者被视为孤立记录。
 ### 属性
 
 属性是附加在订阅者身上的任意属性，除了电子邮件和姓名之外。它们还以 JSON 映射的形式表示。并非所有订阅者都需要具有属性。可以根据订阅者的属性查询和分段到不同的列表中，并将属性插入发送给他们的电子邮件中。例如：
@@ -50,11 +50,11 @@
 
 ## 模板
 
-模板是一种可重复使用的（HTML）设计，可用于各类营销活动。通常情况下，模板包含徽标和品牌元素的标准页眉和页脚区域，而营销活动的内容则插入到中间部分。listmail 支持您能够创建功能强大、动态的 HTML 模板 [Learn more](templating.md).
+模板是一种可重复使用的（HTML）设计，可用于各类营销活动。通常情况下，模板包含徽标和品牌元素的标准页眉和页脚区域，而营销活动的内容则插入到中间部分。stmails 支持您能够创建功能强大、动态的 HTML 模板 [Learn more](templating.md).
 
 ## Messenger
 
-listmail supports multiple custom messaging backends in additional to the default SMTP e-mail backend, enabling not just e-mail campaigns, but arbitrary message campaigns such as SMS, FCM notifications etc. A *Messenger* is a web service that accepts a campaign message pushed to it as a JSON request, which the service can in turn broadcast as SMS, FCM etc. [Learn more](messengers.md).
+stmails supports multiple custom messaging backends in additional to the default SMTP e-mail backend, enabling not just e-mail campaigns, but arbitrary message campaigns such as SMS, FCM notifications etc. A *Messenger* is a web service that accepts a campaign message pushed to it as a JSON request, which the service can in turn broadcast as SMS, FCM etc. [Learn more](messengers.md).
 
 ## Tracking pixel
 
@@ -66,4 +66,4 @@ It is possible to track the clicks on every link that is sent in an e-mail. This
 
 ## Bounce
 
-A bounce occurs when an e-mail that is sent to a recipient "bounces" back for one of many reasons including the recipient address being invalid, their mailbox being full, or the recipient's e-mail service provider marking the e-mail as spam. listmail can automatically process such bounce e-mails that land in a configured POP mailbox, or via APIs of SMTP e-mail providers such as AWS SES and Sengrid. Based on settings, subscribers returning bounced e-mails can either be blocklisted or deleted automatically. [Learn more](bounces.md).
+A bounce occurs when an e-mail that is sent to a recipient "bounces" back for one of many reasons including the recipient address being invalid, their mailbox being full, or the recipient's e-mail service provider marking the e-mail as spam. stmails can automatically process such bounce e-mails that land in a configured POP mailbox, or via APIs of SMTP e-mail providers such as AWS SES and Sengrid. Based on settings, subscribers returning bounced e-mails can either be blocklisted or deleted automatically. [Learn more](bounces.md).

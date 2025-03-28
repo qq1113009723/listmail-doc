@@ -8,7 +8,7 @@
           <strong>Free and open source.</strong>
         </h3>
         <p class="center demo">
-          <a href="https://demo-listmail.naraiu.cc" class="button">Live demo</a>
+          <a href="https://demo-app.stmails.cn" class="button">Live demo</a>
         </p>
       </div>
 
@@ -16,7 +16,7 @@
         <img class="s1" src="static/images/s1.png" />
         <img class="s2" src="static/images/s2.png" />
         <img class="s3" src="static/images/s3.png" />
-        <img class="box" src="{{ .Site.BaseURL }}static/images/splash.png" alt="listmail screenshot" />
+        <img class="box" src="{{ .Site.BaseURL }}static/images/splash.png" alt="stmails screenshot" />
       </div>
   </div>
 </div>
@@ -41,36 +41,36 @@
               {{ end }}
             </li>
             <li>
-              <code>./listmail --new-config</code> to generate config.toml. Edit it.
+              <code>./stmails --new-config</code> to generate config.toml. Edit it.
             </li>
-            <li><code>./listmail --install</code> to setup the Postgres DB or <code>--upgrade</code> to upgrade an existing DB.</li>
-            <li>Run <code>./listmail</code> and visit <code>http://localhost:9000</code></li>
+            <li><code>./stmails --install</code> to setup the Postgres DB or <code>--upgrade</code> to upgrade an existing DB.</li>
+            <li>Run <code>./stmails</code> and visit <code>http://localhost:9000</code></li>
           </ul>
           <p><a href="/docs/installation">Installation docs &rarr;</a></p>
 
           <br />
           <h3>Hosting providers</h3>
-          <a href="https://railway.app/new/template/listmail"><img src="https://railway.app/button.svg" alt="One-click deploy on Railway" style="max-height: 32px;" /></a>
+          <a href="https://railway.app/new/template/stmails"><img src="https://railway.app/button.svg" alt="One-click deploy on Railway" style="max-height: 32px;" /></a>
           <br />
-          <a href="https://www.pikapods.com/pods?run=listmail"><img src="https://www.pikapods.com/static/run-button.svg" alt="Deploy on PikaPod" /></a>
+          <a href="https://www.pikapods.com/pods?run=stmails"><img src="https://www.pikapods.com/static/run-button.svg" alt="Deploy on PikaPod" /></a>
           <br />
-          <a href="https://dash.elest.io/deploy?soft=listmail&id=237"><img height="33" src="https://raw.githubusercontent.com/elestio-examples/reactjs/refs/heads/master/src/deploy-on-elestio.png" alt="Deploy on Elestio" /></a>
+          <a href="https://dash.elest.io/deploy?soft=stmails&id=237"><img height="33" src="https://raw.githubusercontent.com/elestio-examples/reactjs/refs/heads/master/src/deploy-on-elestio.png" alt="Deploy on Elestio" /></a>
           <br />
           <a href="https://zeabur.com/templates/5EDMN6"><img width="148" src="https://zeabur.com/button.svg" alt="Deploy on Zeabur"/></a>
-          <p><small>*listmail has no affiliation with any of these providers.</small></p>
+          <p><small>*stmails has no affiliation with any of these providers.</small></p>
         </div>
       </div>
       <div class="col-6">
         <div class="box">
           <h3>Docker</h3>
-          <p><a href="https://hub.docker.com/r/listmail/listmail/tags?page=1&ordering=last_updated&name=latest"><code>listmail/listmail:latest</code></a></p>
+          <p><a href="https://hub.docker.com/r/stmails/stmails/tags?page=1&ordering=last_updated&name=latest"><code>stmails/stmails:latest</code></a></p>
           <p>
-            Download and use the sample <a href="https://github.com/knadh/listmail/blob/master/docker-compose.yml">docker-compose.yml</a>
+            Download and use the sample <a href="https://github.com/knadh/stmails/blob/master/docker-compose.yml">docker-compose.yml</a>
           </p>
 
 <pre>
 # Download the compose file to the current directory.
-curl -LO https://github.com/knadh/listmail/raw/master/docker-compose.yml
+curl -LO https://github.com/knadh/stmails/raw/master/docker-compose.yml
 
 # Run the services in the background.
 docker compose up -d
@@ -140,7 +140,7 @@ docker compose up -d
         <img src="static/images/performance.png" alt="Screenshot of performance metrics" />
 
         <figcaption>
-          A production listmail instance sending a campaign of 7+ million e-mails.<br />
+          A production stmails instance sending a campaign of 7+ million e-mails.<br />
           CPU usage is a fraction of a single core with peak RAM usage of 57 MB.
         </figcaption>
       </figure>
@@ -201,8 +201,8 @@ docker compose up -d
           <div class="box">
             <h2>Developers</h2>
             <p>
-              listmail is free and open source software licensed under AGPLv3.
-              If you are interested in contributing, check out the <a href="https://github.com/knadh/listmail">GitHub repository</a>
+              stmails is free and open source software licensed under AGPLv3.
+              If you are interested in contributing, check out the <a href="https://github.com/knadh/stmails">GitHub repository</a>
               and refer to the <a href="/docs/developer-setup">developer setup</a>.
               The backend is written in Go and the frontend is Vue with Buefy for UI. 
             </p>

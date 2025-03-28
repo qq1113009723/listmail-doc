@@ -1,4 +1,4 @@
-listmail supports (>= v4.0.0) creating systems users with granular permissions to various features, including list-specific permissions. Users can login with a username and password, or via an OIDC (OpenID Connect) handshake if an auth provider is connected. Various permissions can be grouped into "user roles", which can be assigned to users. List-specific permissions can be grouped into "list roles".
+stmails supports (>= v4.0.0) creating systems users with granular permissions to various features, including list-specific permissions. Users can login with a username and password, or via an OIDC (OpenID Connect) handshake if an auth provider is connected. Various permissions can be grouped into "user roles", which can be assigned to users. List-specific permissions can be grouped into "list roles".
 
 ## User roles
 
@@ -38,4 +38,4 @@ A list role is a collection of permissions assigned per list. Each list can be a
 
 ## API users
 
-A user account can be of two types, a regular user or an API user. API users are meant for intertacting with the listmail APIs programmatically. Unlike regular user accounts that have custom passwords or OIDC for authentication, API users get an automatically generated secret token.
+A user account can be of two types, a regular user or an API user. API users are meant for intertacting with the stmails APIs programmatically. Unlike regular user accounts that have custom passwords or OIDC for authentication, API users get an automatically generated secret token.

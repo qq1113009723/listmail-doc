@@ -1,6 +1,6 @@
 # APIs
 
-All features that are available on the listmail dashboard are also available as REST-like HTTP APIs that can be interacted with directly. Request and response bodies are JSON. This allows easy scripting of listmail and integration with other systems, for instance, synchronisation with external subscriber databases.
+All features that are available on the stmails dashboard are also available as REST-like HTTP APIs that can be interacted with directly. Request and response bodies are JSON. This allows easy scripting of stmails and integration with other systems, for instance, synchronisation with external subscriber databases.
 
 !!! note
     If you come across API calls that are yet to be documented, please consider contributing to docs.
@@ -81,5 +81,5 @@ All timestamp fields are in the format `2019-01-01T09:00:00.000000+05:30`. The s
 
 ## OpenAPI (Swagger) spec
 
-The auto-generated OpenAPI (Swagger) specification site for the APIs are available at [**listmail.naraiu.cc/docs/swagger**](https://listmail.naraiu.cc/docs/swagger/)
+The auto-generated OpenAPI (Swagger) specification site for the APIs are available at [**app.stmails.cn/docs/swagger**](https://app.stmails.cn/docs/swagger/)
 

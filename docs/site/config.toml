@@ -1,6 +1,6 @@
-baseurl = "https://listmail.naraiu.cc/"
+baseurl = "https://app.stmails.cn/"
 languageCode = "en-us"
-title = "listmail - Free and open source self-hosted newsletter, mailing list manager, and transactional mails"
+title = "stmails - Free and open source self-hosted newsletter, mailing list manager, and transactional mails"
 
 
 [taxonomies]

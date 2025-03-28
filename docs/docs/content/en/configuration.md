@@ -3,22 +3,22 @@
 ### TOML Configuration file
 One or more TOML files can be read by passing `--config config.toml` multiple times. Apart from a few low level configuration variables and the database configuration, all other settings can be managed from the `Settings` dashboard on the admin UI.
 
-To generate a new sample configuration file, run `--listmail --new-config`
+To generate a new sample configuration file, run `--stmails --new-config`
 
 ### Environment variables
-Variables in config.toml can also be provided as environment variables prefixed by `listmail_` with periods replaced by `__` (double underscore). To start listmail purely with environment variables without a configuration file, set the environment variables and pass the config flag as `--config=""`.
+Variables in config.toml can also be provided as environment variables prefixed by `stmails_` with periods replaced by `__` (double underscore). To start stmails purely with environment variables without a configuration file, set the environment variables and pass the config flag as `--config=""`.
 
 Example:
 
 | **Environment variable**       | Example value  |
 | ------------------------------ | -------------- |
-| `listmail_app__address`        | "0.0.0.0:9000" |
-| `listmail_db__host`            | db             |
-| `listmail_db__port`            | 9432           |
-| `listmail_db__user`            | listmail       |
-| `listmail_db__password`        | listmail       |
-| `listmail_db__database`        | listmail       |
-| `listmail_db__ssl_mode`        | disable        |
+| `stmails_app__address`        | "0.0.0.0:9000" |
+| `stmails_db__host`            | db             |
+| `stmails_db__port`            | 9432           |
+| `stmails_db__user`            | stmails       |
+| `stmails_db__password`        | stmails       |
+| `stmails_db__database`        | stmails       |
+| `stmails_db__ssl_mode`        | disable        |
 
 
 ### Customizing system templates
@@ -53,11 +53,11 @@ When configuring auth proxies and web application firewalls, use this table.
 
 #### Using filesystem
 
-When configuring `docker` volume mounts for using filesystem media uploads, you can follow either of two approaches. [The second option may be necessary if](https://github.com/knadh/listmail/issues/1169#issuecomment-1674475945) your setup requires you to use `sudo` for docker commands. 
+When configuring `docker` volume mounts for using filesystem media uploads, you can follow either of two approaches. [The second option may be necessary if](https://github.com/knadh/stmails/issues/1169#issuecomment-1674475945) your setup requires you to use `sudo` for docker commands. 
 
 After making any changes you will need to run `sudo docker compose stop ; sudo docker compose up`. 
 
-And under `https://listmail.mysite.com/admin/settings` you put `/listmail/uploads`. 
+And under `https://stmails.mysite.com/admin/settings` you put `/stmails/uploads`. 
 
 #### Using volumes
 
@@ -68,16 +68,16 @@ Using `docker volumes`, you can specify the name of volume and destination for t
 app:
     volumes:
       - type: volume
-        source: listmail-uploads
-        target: /listmail/uploads
+        source: stmails-uploads
+        target: /stmails/uploads
 
 volumes:
-  listmail-uploads:
+  stmails-uploads:
 ```
 
 !!! note
 
-    This volume is managed by `docker` itself, and you can see find the host path with `docker volume inspect listmail_listmail-uploads`.
+    This volume is managed by `docker` itself, and you can see find the host path with `docker volume inspect stmails_stmails-uploads`.
 
 #### Using bind mounts
 
@@ -90,7 +90,7 @@ Eg:
 ```yml
   app:
     volumes:
-      - ./data/uploads:/listmail/uploads
+      - ./data/uploads:/stmails/uploads
 ```
 The files will be available inside `/data/uploads` directory on the host machine.
 
@@ -98,7 +98,7 @@ To use the default `uploads` folder:
 ```yml
   app:
     volumes:
-      - ./uploads:/listmail/uploads
+      - ./uploads:/stmails/uploads
 ```
 
 ## Logs
@@ -108,26 +108,26 @@ To use the default `uploads` folder:
 https://docs.docker.com/engine/reference/commandline/logs/
 ```
 sudo docker logs -f
-sudo docker logs listmail_app -t
-sudo docker logs listmail_db -t
+sudo docker logs stmails_app -t
+sudo docker logs stmails_db -t
 sudo docker logs --help
 ```
-Container info: `sudo docker inspect listmail_listmail`
+Container info: `sudo docker inspect stmails_stmails`
 
 Docker logs to `/dev/stdout` and `/dev/stderr`. The logs are collected by the docker daemon and stored in your node's host path (by default). The same can be configured (/etc/docker/daemon.json) in your docker daemon settings to setup other logging drivers, logrotate policy and more, which you can read about [here](https://docs.docker.com/config/containers/logging/configure/).
 
 ### Binary
 
-listmail logs to `stdout`, which is usually not saved to any file. To save listmail logs to a file use `./listmail > listmail.log`.
+stmails logs to `stdout`, which is usually not saved to any file. To save stmails logs to a file use `./stmails > stmails.log`.
 
-Settings -> Logs in admin shows the last 1000 lines of the standard log output but gets erased when listmail is restarted.
+Settings -> Logs in admin shows the last 1000 lines of the standard log output but gets erased when stmails is restarted.
 
-For the [service file](https://github.com/knadh/listmail/blob/master/listmail%40.service), you can use `ExecStart=/bin/bash -ce "exec /usr/bin/listmail --config /etc/listmail/config.toml --static-dir /etc/listmail/static >>/etc/listmail/listmail.log 2>&1"` to create a log file that persists after restarts. [More info](https://github.com/knadh/listmail/issues/1462#issuecomment-1868501606).
+For the [service file](https://github.com/knadh/stmails/blob/master/stmails%40.service), you can use `ExecStart=/bin/bash -ce "exec /usr/bin/stmails --config /etc/stmails/config.toml --static-dir /etc/stmails/static >>/etc/stmails/stmails.log 2>&1"` to create a log file that persists after restarts. [More info](https://github.com/knadh/stmails/issues/1462#issuecomment-1868501606).
 
 
 ## Time zone
 
-To change listmail's time zone (logs, etc.) edit `docker-compose.yml`:
+To change stmails's time zone (logs, etc.) edit `docker-compose.yml`:
 ```
 environment:
     - TZ=Etc/UTC

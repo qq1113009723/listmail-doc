@@ -269,7 +269,7 @@ curl -u 'api_username:access_token' 'http://localhost:9000/api/subscribers/1/bou
       "subscriber_id": 99,
       "campaign": {
         "id": 2,
-        "name": "Welcome to listmail"
+        "name": "Welcome to stmails"
       }
     },
     {

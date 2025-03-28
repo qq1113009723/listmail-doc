@@ -107,7 +107,7 @@ curl -u "api_user:token" -X GET 'http://localhost:9000/api/templates/1/preview'
 <p>Nam luctus dui non placerat mattis. Morbi non accumsan orci, vel interdum urna. Duis faucibus id nunc ut euismod.
 	Curabitur et eros id erat feugiat fringilla in eget neque. Aliquam accumsan cursus eros sed faucibus.</p>
 
-<p>Here is a link to <a href="https://listmail.naraiu.cc" target="_blank">listmail</a>.</p>
+<p>Here is a link to <a href="https://app.stmails.cn" target="_blank">stmails</a>.</p>
 ```
 
 ______________________________________________________________________

@@ -1,18 +1,18 @@
 # Messengers
 
-listmail supports multiple custom messaging backends in additional to the default SMTP e-mail backend, enabling not just e-mail campaigns, but arbitrary message campaigns such as SMS, FCM notifications etc.
+stmails supports multiple custom messaging backends in additional to the default SMTP e-mail backend, enabling not just e-mail campaigns, but arbitrary message campaigns such as SMS, FCM notifications etc.
 
 A *Messenger* is a web service that accepts a campaign message pushed to it as a JSON request, which the service can in turn broadcast as SMS, FCM etc. Messengers are registered in the *Settings -> Messengers* UI, and can be selected on individual campaigns.
 
 Messengers support optional BasicAuth authentication. `Plain text` format for campaign content is ideal for messengers such as SMS and FCM.
 
-When a campaign starts, listmail POSTs messages in the following format to the selected messenger's endpoint. The endpoint should return a `200 OK` response in case of a successful request.
+When a campaign starts, stmails POSTs messages in the following format to the selected messenger's endpoint. The endpoint should return a `200 OK` response in case of a successful request.
 
 The address required to broadcast the message, for instance, a phone number or an FCM ID, is expected to be stored and relayed as [subscriber attributes](concepts.md/#attributes). 
 
 ```json
 {
-	"subject": "Welcome to listmail",
+	"subject": "Welcome to stmails",
 	"body": "The message body",
 	"content_type": "plain",
 	"recipients": [{
@@ -40,8 +40,8 @@ Following is a list of HTTP messenger servers that connect to various backends.
 
 | Name                                                                                 | Backend          |
 |:-------------------------------------------------------------------------------------|:-----------------|
-| [listmail-messenger](https://github.com/joeirimpan/listmail-messenger)               | AWS Pinpoint SMS |
-| [listmail-verimor-gateway](https://github.com/antandros/listmail-verimor-gateway)    | Verimor          |
-| [listmail-mailersend](https://github.com/tkawczynski/listmail-mailersend)            | Mailersend       |
-| [listmail-novu-messenger](https://github.com/Codepowercode/listmail-novu-messenger)  | Novu             |
-| [listmail-push-messenger](https://github.com/shyamkrishna21/listmail-push-messenger) | Google FCM       |
+| [stmails-messenger](https://github.com/joeirimpan/stmails-messenger)               | AWS Pinpoint SMS |
+| [stmails-verimor-gateway](https://github.com/antandros/stmails-verimor-gateway)    | Verimor          |
+| [stmails-mailersend](https://github.com/tkawczynski/stmails-mailersend)            | Mailersend       |
+| [stmails-novu-messenger](https://github.com/Codepowercode/stmails-novu-messenger)  | Novu             |
+| [stmails-push-messenger](https://github.com/shyamkrishna21/stmails-push-messenger) | Google FCM       |

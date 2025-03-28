@@ -1,16 +1,16 @@
 openapi: 3.0.0
 
 servers:
-  - description: listmail Developement Server
+  - description: stmails Developement Server
     url: http://localhost:9000/api
 
 info:
   version: "1.0.0"
-  title: listmail
-  description: The API collection for listmail
+  title: stmails
+  description: The API collection for stmails
   license:
     name: AGPL-3.0 license
-    url: https://github.com/knadh/listmail/blob/master/LICENSE
+    url: https://github.com/knadh/stmails/blob/master/LICENSE
 
 tags:
   - name: Miscellaneous
@@ -24,37 +24,37 @@ tags:
   - name: Subscribers
     description: Subscribers API
     externalDocs:
-      url: https://listmail.naraiu.cc/docs/apis/subscribers/
+      url: https://app.stmails.cn/docs/apis/subscribers/
   - name: Bounces
     description: Bounce API
   - name: Lists
     description: Subscriber List API
     externalDocs:
-      url: https://listmail.naraiu.cc/docs/apis/lists/
+      url: https://app.stmails.cn/docs/apis/lists/
   - name: Import
     description: Import API
     externalDocs:
-      url: https://listmail.naraiu.cc/docs/apis/lists/
+      url: https://app.stmails.cn/docs/apis/lists/
   - name: Campaigns
     description: Campaign API
     externalDocs:
-      url: https://listmail.naraiu.cc/docs/apis/campaigns/
+      url: https://app.stmails.cn/docs/apis/campaigns/
   - name: Media
     description: Media API
     externalDocs:
-      url: https://listmail.naraiu.cc/docs/apis/media/
+      url: https://app.stmails.cn/docs/apis/media/
   - name: Templates
     description: Templates API
     externalDocs:
-      url: https://listmail.naraiu.cc/docs/apis/templates/
+      url: https://app.stmails.cn/docs/apis/templates/
   - name: Transactional
     description: Transactional API
     externalDocs:
-      url: https://listmail.naraiu.cc/docs/apis/transactional/
+      url: https://app.stmails.cn/docs/apis/transactional/
   - name: Maintenance
     description: Maintenance API
   - name: Public
-    description: listmail Public API
+    description: stmails Public API
 
 paths:
   /health:
@@ -1099,7 +1099,7 @@ paths:
               properties:
                 params:
                   type: string
-                  description: JSON string containing import parameters for more detail https://listmail.naraiu.cc/docs/apis/import/#params-json-string
+                  description: JSON string containing import parameters for more detail https://app.stmails.cn/docs/apis/import/#params-json-string
                   example: '{"mode":"subscribe", "subscription_status":"confirmed", "delim":",", "lists":[1, 2], "overwrite": true}'
                 file:
                   type: string

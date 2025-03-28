@@ -9,10 +9,10 @@ The app has two distinct components, the Go backend and the VueJS frontend. In t
 
 
 ### First time setup
-`git clone https://github.com/knadh/listmail.git`. The project uses go.mod, so it's best to clone it outside the Go src path.
+`git clone https://github.com/knadh/stmails.git`. The project uses go.mod, so it's best to clone it outside the Go src path.
 
 1. Copy `config.toml.sample` as `config.toml` and add your config.
-2. `make dist` to build the listmail binary. Once the binary is built, run `./listmail --install` to run the DB setup. For subsequent dev runs, use `make run`.
+2. `make dist` to build the stmails binary. Once the binary is built, run `./stmails --install` to run the DB setup. For subsequent dev runs, use `make run`.
 
 > [mailhog](https://github.com/mailhog/MailHog) is an excellent standalone mock SMTP server (with a UI) for testing and dev.
 
@@ -24,8 +24,8 @@ After setting up the dev environment, you can visit `http://localhost:8080`.
 
 
 1. Locally
-- Run `make run` to start the listmail dev server on `:9000`.
-- Run `make run-frontend` to start the Vue frontend in dev mode using yarn on `:8080`. All `/api/*` calls are proxied to the app running on `:9000`. Refer to the [frontend README](https://github.com/knadh/listmail/blob/master/frontend/README.md) for an overview on how the frontend is structured.
+- Run `make run` to start the stmails dev server on `:9000`.
+- Run `make run-frontend` to start the Vue frontend in dev mode using yarn on `:8080`. All `/api/*` calls are proxied to the app running on `:9000`. Refer to the [frontend README](https://github.com/knadh/stmails/blob/master/frontend/README.md) for an overview on how the frontend is structured.
 
 2. Inside containers (Using Makefile)
 - Run `make init-dev-docker` to setup container for db.
@@ -39,4 +39,4 @@ It will set up db, and start frontend/backend for you.
 
 
 # Production build
-Run `make dist` to build the Go binary, build the Javascript frontend, and embed the static assets producing a single self-contained binary, `listmail`
+Run `make dist` to build the Go binary, build the Javascript frontend, and embed the static assets producing a single self-contained binary, `stmails`

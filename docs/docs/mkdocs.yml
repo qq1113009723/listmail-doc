@@ -1,5 +1,5 @@
-site_name: listmail / Documentation
-site_url: https://listmail.naraiu.cc/docs
+site_name: stmails / Documentation
+site_url: https://app.stmails.cn/docs
 theme:
   name: material
   # custom_dir: "mkdocs-material/material"
@@ -80,14 +80,14 @@ plugins:
           name: 中文
           build: true
           default: true
-          site_name: listmail / 文档
+          site_name: stmails / 文档
           nav_translations:
             Introduction: "介绍"
             Getting Started: "开始"
             Installation: "安装"
             Configuration: "配置"
             Upgrade: "更新"
-            Using listmail: "使用 listmail"
+            Using stmails: "使用 stmails"
             Concepts: "概念"
             Templating: "模板化"
             Querying and segmenting subscribers: "对订阅者进行查询与分段"
@@ -121,7 +121,7 @@ nav:
     - "Installation": installation.md
     - "Configuration": configuration.md
     - "Upgrade": upgrade.md
-  - "Using listmail":
+  - "Using stmails":
     - "Concepts": concepts.md
     - "Templating": templating.md
     - "Querying and segmenting subscribers": querying-and-segmentation.md
