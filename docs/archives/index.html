@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.2afb09e1.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -1007,18 +1007,12 @@
 
 
 
-<h1 id="_1">存档<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>在公共web界面上维护着一个全局公共存档。你可以在 “设置” -&gt; “设置” -&gt; “常规” -&gt; 
-“启用公共邮件列表存档” 选项下启用它。</p>
-<p>要使某个营销活动在公共存档中可见（前提是已按上述描述在设置中启用了公共存档功能），
-请在 “营销活动” -&gt; “新建” -&gt; “存档” 下启用 “发布到公共存档” 选项。</p>
-<p>当使用依赖于订阅用户数据的模板变量时（例如任何引用 <code>.Subscriber</code> 的模板变量），
-此类数据必须作为 “营销活动元数据” 提供，这是一个 JSON 对象，
-在渲染存档模板和内容时，它将用来替代 <code>.Subscriber</code></p>
-<p>当启用了对单个订阅用户的追踪功能时， “追踪链接（TrackLink）” 要求将现有用户的通用
-唯一识别码（UUID）作为营销活动元数据的一部分提供。来自已存档营销活动的追踪链接的任何点击操作，
-都将记录到该订阅用户的点击数据中。</p>
-<p>举例如下：</p>
+<h1 id="_1">归档<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>在公共 Web 界面上维护一个全局公共归档。可以在设置 -&gt; 设置 -&gt; 常规 -&gt; 启用公共邮件列表归档中启用它。</p>
+<p>要使活动在公共归档中可用（假设已如上所述在设置中启用），请在活动 -&gt; 创建新 -&gt; 归档中启用"发布到公共归档"选项。</p>
+<p>当使用依赖于订阅者数据的模板变量（例如任何引用 <code>.Subscriber</code> 的模板变量）时，此类数据必须作为"活动元数据"提供，这是一个 JSON 对象，将在渲染归档模板和内容时替代 <code>.Subscriber</code>。</p>
+<p>当启用单个订阅者跟踪时，TrackLink 要求将现有用户的 UUID 作为活动元数据的一部分提供。从归档活动中点击 TrackLink 的任何点击都将计入该订阅者。</p>
+<p>例如：</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;UUID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;5a837423-a186-5623-9a87-82691cbe3631&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;example@example.com&quot;</span><span class="p">,</span>
@@ -1026,7 +1020,7 @@
 <span class="w">  </span><span class="nt">&quot;attribs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p><img alt="Archive campaign" src="../images/archived-campaign-metadata.png" /></p>
+<p><img alt="归档活动" src="../images/archived-campaign-metadata.png" /></p>
 
 
 

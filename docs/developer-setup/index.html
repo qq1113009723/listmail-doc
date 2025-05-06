@@ -14,15 +14,15 @@
       
       
       <link rel="icon" href="../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
     
     
       
-        <title>Developer setup - stmails / 文档</title>
+        <title>开发者设置 - stmails / 文档</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.2afb09e1.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#developer-setup" class="md-skip">
+        <a href="#_1" class="md-skip">
           跳转至
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Developer setup
+              开发者设置
             
           </span>
         </div>
@@ -984,27 +984,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pre-requisites" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Pre-requisites
+      前提条件
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#first-time-setup" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      First time setup
+      首次设置
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#running-the-dev-environment" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      Running the dev environment
+      运行开发环境
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      生产构建
     </span>
   </a>
   
@@ -1026,48 +1035,48 @@
 
 
 
-<h1 id="developer-setup">Developer setup<a class="headerlink" href="#developer-setup" title="Permanent link">&para;</a></h1>
-<p>The app has two distinct components, the Go backend and the VueJS frontend. In the dev environment, both are run independently.</p>
-<h3 id="pre-requisites">Pre-requisites<a class="headerlink" href="#pre-requisites" title="Permanent link">&para;</a></h3>
+<h1 id="_1">开发者设置<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>该应用程序有两个不同的组件：Go 后端和 VueJS 前端。在开发环境中，两者是独立运行的。</p>
+<h3 id="_2">前提条件<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>go</code></li>
-<li><code>nodejs</code> (if you are working on the frontend) and <code>yarn</code></li>
-<li>Postgres database. If there is no local installation, the demo docker DB can be used for development (<code>docker compose up demo-db</code>)</li>
+<li><code>nodejs</code>（如果您正在开发前端）和 <code>yarn</code></li>
+<li>PostgreSQL 数据库。如果没有本地安装，可以使用演示 docker 数据库进行开发（<code>docker compose up demo-db</code>）</li>
 </ul>
-<h3 id="first-time-setup">First time setup<a class="headerlink" href="#first-time-setup" title="Permanent link">&para;</a></h3>
-<p><code>git clone https://github.com/knadh/stmails.git</code>. The project uses go.mod, so it's best to clone it outside the Go src path.</p>
+<h3 id="_3">首次设置<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p><code>git clone https://github.com/knadh/stmails.git</code>。该项目使用 go.mod，所以最好在 Go src 路径之外克隆它。</p>
 <ol>
-<li>Copy <code>config.toml.sample</code> as <code>config.toml</code> and add your config.</li>
-<li><code>make dist</code> to build the stmails binary. Once the binary is built, run <code>./stmails --install</code> to run the DB setup. For subsequent dev runs, use <code>make run</code>.</li>
+<li>将 <code>config.toml.sample</code> 复制为 <code>config.toml</code> 并添加您的配置。</li>
+<li>运行 <code>make dist</code> 构建 stmails 二进制文件。构建完成后，运行 <code>./stmails --install</code> 进行数据库设置。对于后续的开发运行，使用 <code>make run</code>。</li>
 </ol>
 <blockquote>
-<p><a href="https://github.com/mailhog/MailHog">mailhog</a> is an excellent standalone mock SMTP server (with a UI) for testing and dev.</p>
+<p><a href="https://github.com/mailhog/MailHog">mailhog</a> 是一个优秀的独立模拟 SMTP 服务器（带 UI），用于测试和开发。</p>
 </blockquote>
-<h3 id="running-the-dev-environment">Running the dev environment<a class="headerlink" href="#running-the-dev-environment" title="Permanent link">&para;</a></h3>
-<p>You can run your dev environment locally or inside containers.</p>
-<p>After setting up the dev environment, you can visit <code>http://localhost:8080</code>.</p>
+<h3 id="_4">运行开发环境<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>您可以在本地或容器内运行开发环境。</p>
+<p>设置开发环境后，您可以访问 <code>http://localhost:8080</code>。</p>
 <ol>
-<li>Locally</li>
-<li>Run <code>make run</code> to start the stmails dev server on <code>:9000</code>.</li>
+<li>本地运行</li>
+<li>运行 <code>make run</code> 在 <code>:9000</code> 端口启动 stmails 开发服务器。</li>
 <li>
-<p>Run <code>make run-frontend</code> to start the Vue frontend in dev mode using yarn on <code>:8080</code>. All <code>/api/*</code> calls are proxied to the app running on <code>:9000</code>. Refer to the <a href="https://github.com/knadh/stmails/blob/master/frontend/README.md">frontend README</a> for an overview on how the frontend is structured.</p>
+<p>运行 <code>make run-frontend</code> 使用 yarn 在 <code>:8080</code> 端口以开发模式启动 Vue 前端。所有 <code>/api/*</code> 调用都被代理到运行在 <code>:9000</code> 端口的应用程序。有关前端结构的概述，请参阅<a href="https://github.com/knadh/stmails/blob/master/frontend/README.md">前端 README</a>。</p>
 </li>
 <li>
-<p>Inside containers (Using Makefile)</p>
+<p>容器内运行（使用 Makefile）</p>
 </li>
-<li>Run <code>make init-dev-docker</code> to setup container for db.</li>
-<li>Run <code>make dev-docker</code> to setup docker container suite.</li>
+<li>运行 <code>make init-dev-docker</code> 设置数据库容器。</li>
+<li>运行 <code>make dev-docker</code> 设置 docker 容器套件。</li>
 <li>
-<p>Run <code>make rm-dev-docker</code> to clean up docker container suite.</p>
+<p>运行 <code>make rm-dev-docker</code> 清理 docker 容器套件。</p>
 </li>
 <li>
-<p>Inside containers (Using devcontainer)</p>
+<p>容器内运行（使用 devcontainer）</p>
 </li>
-<li>Open repo in vscode, open command palette, and select "Dev Containers: Rebuild and Reopen in Container".</li>
+<li>在 vscode 中打开仓库，打开命令面板，选择"Dev Containers: Rebuild and Reopen in Container"。</li>
 </ol>
-<p>It will set up db, and start frontend/backend for you.</p>
-<h1 id="production-build">Production build<a class="headerlink" href="#production-build" title="Permanent link">&para;</a></h1>
-<p>Run <code>make dist</code> to build the Go binary, build the Javascript frontend, and embed the static assets producing a single self-contained binary, <code>stmails</code></p>
+<p>它将设置数据库，并为您启动前端/后端。</p>
+<h3 id="_5">生产构建<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>运行 <code>make dist</code> 构建 Go 二进制文件，构建 Javascript 前端，并嵌入静态资源，生成一个独立的二进制文件 <code>stmails</code>。</p>
 
 
 

@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.2afb09e1.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#bounce-processing" class="md-skip">
+        <a href="#_1" class="md-skip">
           跳转至
         </a>
       
@@ -598,9 +598,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pop3-bounce-mailbox" class="md-nav__link">
+  <a href="#pop3" class="md-nav__link">
     <span class="md-ellipsis">
-      POP3 bounce mailbox
+      POP3 退信邮箱
     </span>
   </a>
   
@@ -616,9 +616,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#external-webhooks" class="md-nav__link">
+  <a href="#webhooks" class="md-nav__link">
     <span class="md-ellipsis">
-      External webhooks
+      外部 webhooks
     </span>
   </a>
   
@@ -634,9 +634,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#exporting-bounces" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Exporting bounces
+      导出退信
     </span>
   </a>
   
@@ -1077,9 +1077,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pop3-bounce-mailbox" class="md-nav__link">
+  <a href="#pop3" class="md-nav__link">
     <span class="md-ellipsis">
-      POP3 bounce mailbox
+      POP3 退信邮箱
     </span>
   </a>
   
@@ -1095,9 +1095,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#external-webhooks" class="md-nav__link">
+  <a href="#webhooks" class="md-nav__link">
     <span class="md-ellipsis">
-      External webhooks
+      外部 webhooks
     </span>
   </a>
   
@@ -1113,9 +1113,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#exporting-bounces" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Exporting bounces
+      导出退信
     </span>
   </a>
   
@@ -1137,40 +1137,40 @@
 
 
 
-<h1 id="bounce-processing">Bounce processing<a class="headerlink" href="#bounce-processing" title="Permanent link">&para;</a></h1>
-<p>Enable bounce processing in Settings -&gt; Bounces. POP3 bounce scanning and APIs only become available once the setting is enabled.</p>
-<h2 id="pop3-bounce-mailbox">POP3 bounce mailbox<a class="headerlink" href="#pop3-bounce-mailbox" title="Permanent link">&para;</a></h2>
-<p>Configure the bounce mailbox in Settings -&gt; Bounces. Either the "From" e-mail that is set on a campaign (or in settings) should have a POP3 mailbox behind it to receive bounce e-mails, or you should configure a dedicated POP3 mailbox and add that address as the <code>Return-Path</code> (envelope sender) header in Settings -&gt; SMTP -&gt; Custom headers box. For example:</p>
+<h1 id="_1">退信处理<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>在设置 -&gt; 退信中启用退信处理。POP3 退信扫描和 API 只有在启用此设置后才会可用。</p>
+<h2 id="pop3">POP3 退信邮箱<a class="headerlink" href="#pop3" title="Permanent link">&para;</a></h2>
+<p>在设置 -&gt; 退信中配置退信邮箱。活动（或在设置中）设置的"发件人"电子邮件地址应该有一个 POP3 邮箱来接收退信邮件，或者您应该配置一个专用的 POP3 邮箱，并在设置 -&gt; SMTP -&gt; 自定义头部框中将该地址添加为 <code>Return-Path</code>（信封发件人）头部。例如：</p>
 <div class="highlight"><pre><span></span><code>[
     {&quot;Return-Path&quot;: &quot;your-bounce-inbox@site.com&quot;}
 ]
 </code></pre></div>
-<p>Some mail servers may also return the bounce to the <code>Reply-To</code> address, which can also be added to the header settings.</p>
+<p>某些邮件服务器也可能将退信返回到 <code>Reply-To</code> 地址，这也可以添加到头部设置中。</p>
 <h2 id="webhook-api">Webhook API<a class="headerlink" href="#webhook-api" title="Permanent link">&para;</a></h2>
-<p>The bounce webhook API can be used to record bounce events with custom scripting. This could be by reading a mailbox, a database, or mail server logs.</p>
+<p>退信 webhook API 可用于通过自定义脚本记录退信事件。这可以通过读取邮箱、数据库或邮件服务器日志来实现。</p>
 <table>
 <thead>
 <tr>
-<th>Method</th>
-<th>Endpoint</th>
-<th>Description</th>
+<th>方法</th>
+<th>端点</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>POST</code></td>
 <td>/webhooks/bounce</td>
-<td>Record a bounce event.</td>
+<td>记录退信事件。</td>
 </tr>
 </tbody>
 </table>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
+<th>名称</th>
+<th>类型</th>
+<th>必填</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
@@ -1178,37 +1178,37 @@
 <td>subscriber_uuid</td>
 <td>string</td>
 <td></td>
-<td>The UUID of the subscriber. Either this or <code>email</code> is required.</td>
+<td>订阅者的 UUID。需要提供此字段或 <code>email</code>。</td>
 </tr>
 <tr>
 <td>email</td>
 <td>string</td>
 <td></td>
-<td>The e-mail of the subscriber. Either this or <code>subscriber_uuid</code> is required.</td>
+<td>订阅者的电子邮件。需要提供此字段或 <code>subscriber_uuid</code>。</td>
 </tr>
 <tr>
 <td>campaign_uuid</td>
 <td>string</td>
 <td></td>
-<td>UUID of the campaign for which the bounce happened.</td>
+<td>发生退信的活动 UUID。</td>
 </tr>
 <tr>
 <td>source</td>
 <td>string</td>
-<td>Yes</td>
-<td>A string indicating the source, eg: <code>api</code>, <code>my_script</code> etc.</td>
+<td>是</td>
+<td>表示来源的字符串，例如：<code>api</code>、<code>my_script</code> 等。</td>
 </tr>
 <tr>
 <td>type</td>
 <td>string</td>
-<td>Yes</td>
-<td><code>hard</code> or <code>soft</code> bounce. Currently, this has no effect on how the bounce is treated.</td>
+<td>是</td>
+<td><code>hard</code> 或 <code>soft</code> 退信。目前，这不会影响退信的处理方式。</td>
 </tr>
 <tr>
 <td>meta</td>
 <td>string</td>
 <td></td>
-<td>An optional escaped JSON string with arbitrary metadata about the bounce event.</td>
+<td>可选的转义 JSON 字符串，包含关于退信事件的任意元数据。</td>
 </tr>
 </tbody>
 </table>
@@ -1216,99 +1216,99 @@
 <span class="w">    </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--data<span class="w"> </span><span class="s1">&#39;{&quot;email&quot;: &quot;user1@mail.com&quot;, &quot;campaign_uuid&quot;: &quot;9f86b50d-5711-41c8-ab03-bc91c43d711b&quot;, &quot;source&quot;: &quot;api&quot;, &quot;type&quot;: &quot;hard&quot;, &quot;meta&quot;: &quot;{\&quot;additional\&quot;: \&quot;info\&quot;}}&#39;</span>
 </code></pre></div>
-<h2 id="external-webhooks">External webhooks<a class="headerlink" href="#external-webhooks" title="Permanent link">&para;</a></h2>
-<p>stmails supports receiving bounce webhook events from the following SMTP providers.</p>
+<h2 id="webhooks">外部 webhooks<a class="headerlink" href="#webhooks" title="Permanent link">&para;</a></h2>
+<p>stmails 支持从以下 SMTP 提供商接收退信 webhook 事件。</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Endpoint</th>
-<th style="text-align: left;">Description</th>
-<th style="text-align: left;">More info</th>
+<th style="text-align: left;">端点</th>
+<th style="text-align: left;">说明</th>
+<th style="text-align: left;">更多信息</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: left;"><code>https://stmails.yoursite.com/webhooks/service/ses</code></td>
 <td style="text-align: left;">Amazon (AWS) SES</td>
-<td style="text-align: left;">See below</td>
+<td style="text-align: left;">见下文</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>https://stmails.yoursite.com/webhooks/service/sendgrid</code></td>
-<td style="text-align: left;">Sendgrid / Twilio Signed event webhook</td>
-<td style="text-align: left;"><a href="https://docs.sendgrid.com/for-developers/tracking-events/getting-started-event-webhook-security-features">More info</a></td>
+<td style="text-align: left;">Sendgrid / Twilio 签名事件 webhook</td>
+<td style="text-align: left;"><a href="https://docs.sendgrid.com/for-developers/tracking-events/getting-started-event-webhook-security-features">更多信息</a></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>https://stmails.yoursite.com/webhooks/service/postmark</code></td>
 <td style="text-align: left;">Postmark webhook</td>
-<td style="text-align: left;"><a href="https://postmarkapp.com/developer/webhooks/webhooks-overview">More info</a></td>
+<td style="text-align: left;"><a href="https://postmarkapp.com/developer/webhooks/webhooks-overview">更多信息</a></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>https://stmails.yoursite.com/webhooks/service/forwardemail</code></td>
 <td style="text-align: left;">Forward Email webhook</td>
-<td style="text-align: left;"><a href="https://forwardemail.net/en/faq#do-you-support-bounce-webhooks">More info</a></td>
+<td style="text-align: left;"><a href="https://forwardemail.net/en/faq#do-you-support-bounce-webhooks">更多信息</a></td>
 </tr>
 </tbody>
 </table>
 <h2 id="amazon-simple-email-service-ses">Amazon Simple Email Service (SES)<a class="headerlink" href="#amazon-simple-email-service-ses" title="Permanent link">&para;</a></h2>
-<p>If using SES as your SMTP provider, automatic bounce processing is the recommended way to maintain your <a href="https://docs.aws.amazon.com/ses/latest/dg/monitor-sender-reputation.html">sender reputation</a>. The settings below are based on Amazon's <a href="https://docs.aws.amazon.com/ses/latest/dg/send-email-concepts-deliverability.html">recommendations</a>. Please note that your sending domain must be verified in SES before proceeding.</p>
+<p>如果使用 SES 作为您的 SMTP 提供商，自动退信处理是维护您的<a href="https://docs.aws.amazon.com/ses/latest/dg/monitor-sender-reputation.html">发件人声誉</a>的推荐方式。以下设置基于 Amazon 的<a href="https://docs.aws.amazon.com/ses/latest/dg/send-email-concepts-deliverability.html">建议</a>。请注意，在继续之前，您的发送域名必须在 SES 中验证。</p>
 <ol>
-<li>In stmails settings, go to the "Bounces" tab and configure the following:<ul>
-<li>Enable bounce processing: <code>Enabled</code><ul>
-<li>Soft:<ul>
-<li>Bounce count: <code>2</code></li>
-<li>Action: <code>None</code></li>
+<li>在 stmails 设置中，转到"退信"选项卡并配置以下内容：<ul>
+<li>启用退信处理：<code>已启用</code><ul>
+<li>软退信：<ul>
+<li>退信计数：<code>2</code></li>
+<li>操作：<code>无</code></li>
 </ul>
 </li>
-<li>Hard:<ul>
-<li>Bounce count: <code>1</code></li>
-<li>Action: <code>Blocklist</code></li>
+<li>硬退信：<ul>
+<li>退信计数：<code>1</code></li>
+<li>操作：<code>加入黑名单</code></li>
 </ul>
 </li>
-<li>Complaint: <ul>
-<li>Bounce count: <code>1</code></li>
-<li>Action: <code>Blocklist</code></li>
+<li>投诉： <ul>
+<li>退信计数：<code>1</code></li>
+<li>操作：<code>加入黑名单</code></li>
 </ul>
 </li>
 </ul>
 </li>
-<li>Enable bounce webhooks: <code>Enabled</code></li>
-<li>Enable SES: <code>Enabled</code></li>
+<li>启用退信 webhooks：<code>已启用</code></li>
+<li>启用 SES：<code>已启用</code></li>
 </ul>
 </li>
-<li>In the AWS console, go to <a href="https://console.aws.amazon.com/sns/">Simple Notification Service</a> and create a new topic with the following settings:<ul>
-<li>Type: <code>Standard</code></li>
-<li>Name: <code>ses-bounces</code> (or any other name)</li>
+<li>在 AWS 控制台中，转到<a href="https://console.aws.amazon.com/sns/">Simple Notification Service</a>并创建一个新主题，设置如下：<ul>
+<li>类型：<code>标准</code></li>
+<li>名称：<code>ses-bounces</code>（或任何其他名称）</li>
 </ul>
 </li>
-<li>Create a new subscription to that topic with the following settings:<ul>
-<li>Protocol: <code>HTTPS</code></li>
-<li>Endpoint: <code>https://stmails.yoursite.com/webhooks/service/ses</code></li>
-<li>Enable raw message delivery: <code>Disabled</code> (unchecked)</li>
+<li>为该主题创建新订阅，设置如下：<ul>
+<li>协议：<code>HTTPS</code></li>
+<li>端点：<code>https://stmails.yoursite.com/webhooks/service/ses</code></li>
+<li>启用原始消息传递：<code>已禁用</code>（未选中）</li>
 </ul>
 </li>
-<li>SES will then make a request to your stmails instance to confirm the subscription. After a page refresh, the subscription should have a status of "Confirmed". If not, your endpoint may be incorrect or not publicly accessible.</li>
-<li>In the AWS console, go to <a href="https://console.aws.amazon.com/ses/">Simple Email Service</a> and click "Verified identities" in the left sidebar.</li>
-<li>Click your domain and go to the "Notifications" tab.</li>
-<li>Next to "Feedback notifications", click "Edit".</li>
-<li>For both "Bounce feedback" and "Complaint feedback", use the following settings:<ul>
-<li>SNS topic: <code>ses-bounces</code> (or whatever you named it)</li>
-<li>Include original email headers: <code>Enabled</code> (checked)</li>
+<li>SES 将向您的 stmails 实例发送请求以确认订阅。刷新页面后，订阅状态应为"已确认"。如果不是，您的端点可能不正确或无法公开访问。</li>
+<li>在 AWS 控制台中，转到<a href="https://console.aws.amazon.com/ses/">Simple Email Service</a>并点击左侧边栏中的"已验证身份"。</li>
+<li>点击您的域名并转到"通知"选项卡。</li>
+<li>在"反馈通知"旁边，点击"编辑"。</li>
+<li>对于"退信反馈"和"投诉反馈"，使用以下设置：<ul>
+<li>SNS 主题：<code>ses-bounces</code>（或您命名的任何名称）</li>
+<li>包含原始电子邮件头部：<code>已启用</code>（选中）</li>
 </ul>
 </li>
-<li>Repeat steps 6-8 for any <code>Email address</code> identities you send from using stmails</li>
-<li>Bounce processing should now be working. You can test it with <a href="https://docs.aws.amazon.com/ses/latest/dg/send-an-email-from-console.html#send-email-simulator">SES simulator addresses</a>. Add them as subscribers, send them campaign previews, and ensure that the appropriate action was taken after the configured bounce count was reached.<ul>
-<li>Soft bounce: <code>ooto@simulator.amazonses.com</code></li>
-<li>Hard bounce: <code>bounce@simulator.amazonses.com</code></li>
-<li>Complaint: <code>complaint@simulator.amazonses.com</code></li>
+<li>对于使用 stmails 发送的每个<code>电子邮件地址</code>身份，重复步骤 6-8</li>
+<li>退信处理现在应该可以工作了。您可以使用<a href="https://docs.aws.amazon.com/ses/latest/dg/send-an-email-from-console.html#send-email-simulator">SES 模拟器地址</a>进行测试。将它们添加为订阅者，发送活动预览，并确保在达到配置的退信计数后采取了适当的操作。<ul>
+<li>软退信：<code>ooto@simulator.amazonses.com</code></li>
+<li>硬退信：<code>bounce@simulator.amazonses.com</code></li>
+<li>投诉：<code>complaint@simulator.amazonses.com</code></li>
 </ul>
 </li>
-<li>You can optionally <a href="https://docs.aws.amazon.com/ses/latest/dg/monitor-sending-activity-using-notifications-email.html#monitor-sending-activity-using-notifications-email-disabling">disable email feedback forwarding</a>.</li>
+<li>您可以选择<a href="https://docs.aws.amazon.com/ses/latest/dg/monitor-sending-activity-using-notifications-email.html#monitor-sending-activity-using-notifications-email-disabling">禁用电子邮件反馈转发</a>。</li>
 </ol>
-<h2 id="exporting-bounces">Exporting bounces<a class="headerlink" href="#exporting-bounces" title="Permanent link">&para;</a></h2>
-<p>Bounces can be exported via the JSON API:
+<h2 id="_2">导出退信<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>可以通过 JSON API 导出退信：
 <div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-u<span class="w"> </span><span class="s1">&#39;username:passsword&#39;</span><span class="w"> </span><span class="s1">&#39;http://localhost:9000/api/bounces&#39;</span>
 </code></pre></div></p>
-<p>Or by querying the database directly:
+<p>或直接查询数据库：
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">bounces</span><span class="p">.</span><span class="n">created_at</span><span class="p">,</span>
 <span class="w">    </span><span class="n">bounces</span><span class="p">.</span><span class="n">subscriber_id</span><span class="p">,</span>
 <span class="w">    </span><span class="n">subscribers</span><span class="p">.</span><span class="n">uuid</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">subscriber_uuid</span><span class="p">,</span>

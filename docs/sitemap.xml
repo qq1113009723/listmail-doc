@@ -2,350 +2,350 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>https://app.stmails.cn/docs/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/"/>
     </url>
     <url>
         <loc>https://app.stmails.cn/docs/archives/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/archives/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/archives/"/>
     </url>
     <url>
         <loc>https://app.stmails.cn/docs/bounces/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/bounces/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/bounces/"/>
     </url>
     <url>
         <loc>https://app.stmails.cn/docs/concepts/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/concepts/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/concepts/"/>
     </url>
     <url>
         <loc>https://app.stmails.cn/docs/configuration/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/configuration/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/configuration/"/>
     </url>
     <url>
         <loc>https://app.stmails.cn/docs/developer-setup/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/developer-setup/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/developer-setup/"/>
     </url>
     <url>
         <loc>https://app.stmails.cn/docs/external-integration/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/external-integration/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/external-integration/"/>
     </url>
     <url>
         <loc>https://app.stmails.cn/docs/i18n/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/i18n/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/i18n/"/>
     </url>
     <url>
         <loc>https://app.stmails.cn/docs/installation/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/installation/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/installation/"/>
     </url>
     <url>
         <loc>https://app.stmails.cn/docs/messengers/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/messengers/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/messengers/"/>
     </url>
     <url>
         <loc>https://app.stmails.cn/docs/querying-and-segmentation/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/querying-and-segmentation/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/querying-and-segmentation/"/>
     </url>
     <url>
         <loc>https://app.stmails.cn/docs/roles-and-permissions/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/roles-and-permissions/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/roles-and-permissions/"/>
     </url>
     <url>
         <loc>https://app.stmails.cn/docs/templating/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/templating/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/templating/"/>
     </url>
     <url>
         <loc>https://app.stmails.cn/docs/upgrade/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/upgrade/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/upgrade/"/>
     </url>
     <url>
         <loc>https://app.stmails.cn/docs/apis/apis/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/apis/apis/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/apis/apis/"/>
     </url>
     <url>
         <loc>https://app.stmails.cn/docs/apis/bounces/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/apis/bounces/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/apis/bounces/"/>
     </url>
     <url>
         <loc>https://app.stmails.cn/docs/apis/campaigns/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/apis/campaigns/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/apis/campaigns/"/>
     </url>
     <url>
         <loc>https://app.stmails.cn/docs/apis/import/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/apis/import/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/apis/import/"/>
     </url>
     <url>
         <loc>https://app.stmails.cn/docs/apis/lists/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/apis/lists/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/apis/lists/"/>
     </url>
     <url>
         <loc>https://app.stmails.cn/docs/apis/media/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/apis/media/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/apis/media/"/>
     </url>
     <url>
         <loc>https://app.stmails.cn/docs/apis/sdks/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/apis/sdks/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/apis/sdks/"/>
     </url>
     <url>
         <loc>https://app.stmails.cn/docs/apis/subscribers/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/apis/subscribers/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/apis/subscribers/"/>
     </url>
     <url>
         <loc>https://app.stmails.cn/docs/apis/templates/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/apis/templates/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/apis/templates/"/>
     </url>
     <url>
         <loc>https://app.stmails.cn/docs/apis/transactional/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/apis/transactional/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/apis/transactional/"/>
     </url>
     <url>
         <loc>https://app.stmails.cn/docs/maintenance/performance/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/maintenance/performance/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/maintenance/performance/"/>
     </url>
     <url>
         <loc>https://app.stmails.cn/docs/en/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/"/>
     </url>
     <url>
         <loc>https://app.stmails.cn/docs/en/archives/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/archives/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/archives/"/>
     </url>
     <url>
         <loc>https://app.stmails.cn/docs/en/bounces/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/bounces/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/bounces/"/>
     </url>
     <url>
         <loc>https://app.stmails.cn/docs/en/concepts/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/concepts/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/concepts/"/>
     </url>
     <url>
         <loc>https://app.stmails.cn/docs/en/configuration/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/configuration/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/configuration/"/>
     </url>
     <url>
         <loc>https://app.stmails.cn/docs/en/developer-setup/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/developer-setup/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/developer-setup/"/>
     </url>
     <url>
         <loc>https://app.stmails.cn/docs/en/external-integration/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/external-integration/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/external-integration/"/>
     </url>
     <url>
         <loc>https://app.stmails.cn/docs/en/i18n/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/i18n/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/i18n/"/>
     </url>
     <url>
         <loc>https://app.stmails.cn/docs/en/installation/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/installation/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/installation/"/>
     </url>
     <url>
         <loc>https://app.stmails.cn/docs/en/messengers/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/messengers/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/messengers/"/>
     </url>
     <url>
         <loc>https://app.stmails.cn/docs/en/querying-and-segmentation/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/querying-and-segmentation/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/querying-and-segmentation/"/>
     </url>
     <url>
         <loc>https://app.stmails.cn/docs/en/roles-and-permissions/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/roles-and-permissions/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/roles-and-permissions/"/>
     </url>
     <url>
         <loc>https://app.stmails.cn/docs/en/templating/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/templating/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/templating/"/>
     </url>
     <url>
         <loc>https://app.stmails.cn/docs/en/upgrade/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/upgrade/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/upgrade/"/>
     </url>
     <url>
         <loc>https://app.stmails.cn/docs/en/apis/apis/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/apis/apis/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/apis/apis/"/>
     </url>
     <url>
         <loc>https://app.stmails.cn/docs/en/apis/bounces/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/apis/bounces/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/apis/bounces/"/>
     </url>
     <url>
         <loc>https://app.stmails.cn/docs/en/apis/campaigns/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/apis/campaigns/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/apis/campaigns/"/>
     </url>
     <url>
         <loc>https://app.stmails.cn/docs/en/apis/import/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/apis/import/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/apis/import/"/>
     </url>
     <url>
         <loc>https://app.stmails.cn/docs/en/apis/lists/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/apis/lists/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/apis/lists/"/>
     </url>
     <url>
         <loc>https://app.stmails.cn/docs/en/apis/media/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/apis/media/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/apis/media/"/>
     </url>
     <url>
         <loc>https://app.stmails.cn/docs/en/apis/sdks/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/apis/sdks/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/apis/sdks/"/>
     </url>
     <url>
         <loc>https://app.stmails.cn/docs/en/apis/subscribers/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/apis/subscribers/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/apis/subscribers/"/>
     </url>
     <url>
         <loc>https://app.stmails.cn/docs/en/apis/templates/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/apis/templates/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/apis/templates/"/>
     </url>
     <url>
         <loc>https://app.stmails.cn/docs/en/apis/transactional/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/apis/transactional/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/apis/transactional/"/>
     </url>
     <url>
         <loc>https://app.stmails.cn/docs/en/maintenance/performance/</loc>
-        <lastmod>2025-04-08</lastmod>
+        <lastmod>2025-05-06</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://app.stmails.cn/docs/en/maintenance/performance/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://app.stmails.cn/docs/maintenance/performance/"/>

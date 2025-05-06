@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.2afb09e1.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#user-roles" class="md-skip">
+        <a href="#_1" class="md-skip">
           跳转至
         </a>
       
@@ -669,6 +669,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -701,6 +703,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -709,27 +713,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#user-roles" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      User roles
+      用户角色
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#list-roles" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      List roles
+      列表角色
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#api-users" class="md-nav__link">
+  <a href="#api" class="md-nav__link">
     <span class="md-ellipsis">
-      API users
+      API 用户
     </span>
   </a>
   
@@ -1045,6 +1049,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1053,27 +1059,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#user-roles" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      User roles
+      用户角色
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#list-roles" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      List roles
+      列表角色
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#api-users" class="md-nav__link">
+  <a href="#api" class="md-nav__link">
     <span class="md-ellipsis">
-      API users
+      API 用户
     </span>
   </a>
   
@@ -1095,151 +1101,150 @@
 
 
 
-  <h1>用户角色和权限</h1>
-
-<p>stmails supports (&gt;= v4.0.0) creating systems users with granular permissions to various features, including list-specific permissions. Users can login with a username and password, or via an OIDC (OpenID Connect) handshake if an auth provider is connected. Various permissions can be grouped into "user roles", which can be assigned to users. List-specific permissions can be grouped into "list roles".</p>
-<h2 id="user-roles">User roles<a class="headerlink" href="#user-roles" title="Permanent link">&para;</a></h2>
-<p>A user role is a collection of user related permissions. User roles are attached to user accounts. User roles can be managed in <code>Admin -&gt; Users -&gt; User roles</code> The permissions are described below.</p>
+<h1 id="_1">角色和权限<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>stmails（&gt;= v4.0.0）支持创建具有各种功能细粒度权限的系统用户，包括特定列表的权限。用户可以使用用户名和密码登录，或者如果连接了身份验证提供程序，则可以通过 OIDC（OpenID Connect）握手登录。各种权限可以分组为"用户角色"，这些角色可以分配给用户。特定列表的权限可以分组为"列表角色"。</p>
+<h2 id="_2">用户角色<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>用户角色是用户相关权限的集合。用户角色附加到用户账户。用户角色可以在 <code>管理 -&gt; 用户 -&gt; 用户角色</code> 中管理。权限说明如下。</p>
 <table>
 <thead>
 <tr>
-<th>Group</th>
-<th>Permission</th>
-<th>Description</th>
+<th>组</th>
+<th>权限</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>lists</td>
 <td>lists:get_all</td>
-<td>Get details of all lists</td>
+<td>获取所有列表的详细信息</td>
 </tr>
 <tr>
 <td></td>
 <td>lists:manage_all</td>
-<td>Create, update, and delete all lists</td>
+<td>创建、更新和删除所有列表</td>
 </tr>
 <tr>
 <td>subscribers</td>
 <td>subscribers:get</td>
-<td>Get individual subscriber details</td>
+<td>获取单个订阅者详细信息</td>
 </tr>
 <tr>
 <td></td>
 <td>subscribers:get_all</td>
-<td>Get all subscribers and their details</td>
+<td>获取所有订阅者及其详细信息</td>
 </tr>
 <tr>
 <td></td>
 <td>subscribers:manage</td>
-<td>Add, update, and delete subscribers</td>
+<td>添加、更新和删除订阅者</td>
 </tr>
 <tr>
 <td></td>
 <td>subscribers:import</td>
-<td>Import subscribers from external files</td>
+<td>从外部文件导入订阅者</td>
 </tr>
 <tr>
 <td></td>
 <td>subscribers:sql_query</td>
-<td>Run SQL queries on subscriber data. <strong>WARNING:</strong> This permission will allow the querying of all lists and subscribers directly from the database with SQL expressions, superceding individual list and subscriber permissions above.</td>
+<td>对订阅者数据运行 SQL 查询。<strong>警告：</strong> 此权限将允许使用 SQL 表达式直接从数据库查询所有列表和订阅者，优先于上述单个列表和订阅者权限。</td>
 </tr>
 <tr>
 <td></td>
 <td>tx:send</td>
-<td>Send transactional messages to subscribers</td>
+<td>向订阅者发送事务性消息</td>
 </tr>
 <tr>
 <td>campaigns</td>
 <td>campaigns:get</td>
-<td>Get campaign details</td>
+<td>获取活动详细信息</td>
 </tr>
 <tr>
 <td></td>
 <td>campaigns:get_analytics</td>
-<td>Access campaign performance metrics</td>
+<td>访问活动性能指标</td>
 </tr>
 <tr>
 <td></td>
 <td>campaigns:manage</td>
-<td>Create, update, and delete campaigns</td>
+<td>创建、更新和删除活动</td>
 </tr>
 <tr>
 <td>bounces</td>
 <td>bounces:get</td>
-<td>Get email bounce records</td>
+<td>获取电子邮件退信记录</td>
 </tr>
 <tr>
 <td></td>
 <td>bounces:manage</td>
-<td>Process and handle bounced emails</td>
+<td>处理退信电子邮件</td>
 </tr>
 <tr>
 <td></td>
 <td>webhooks:post_bounce</td>
-<td>Receive bounce notifications via webhook</td>
+<td>通过 webhook 接收退信通知</td>
 </tr>
 <tr>
 <td>media</td>
 <td>media:get</td>
-<td>Get uploaded media files</td>
+<td>获取上传的媒体文件</td>
 </tr>
 <tr>
 <td></td>
 <td>media:manage</td>
-<td>Upload, update, and delete media</td>
+<td>上传、更新和删除媒体</td>
 </tr>
 <tr>
 <td>templates</td>
 <td>templates:get</td>
-<td>Get email templates</td>
+<td>获取电子邮件模板</td>
 </tr>
 <tr>
 <td></td>
 <td>templates:manage</td>
-<td>Create, update, and delete templates</td>
+<td>创建、更新和删除模板</td>
 </tr>
 <tr>
 <td>users</td>
 <td>users:get</td>
-<td>Get system user accounts</td>
+<td>获取系统用户账户</td>
 </tr>
 <tr>
 <td></td>
 <td>users:manage</td>
-<td>Create, update, and delete user accounts</td>
+<td>创建、更新和删除用户账户</td>
 </tr>
 <tr>
 <td></td>
 <td>roles:get</td>
-<td>Get user roles and permissions</td>
+<td>获取用户角色和权限</td>
 </tr>
 <tr>
 <td></td>
 <td>roles:manage</td>
-<td>Create and modify user roles</td>
+<td>创建和修改用户角色</td>
 </tr>
 <tr>
 <td>settings</td>
 <td>settings:get</td>
-<td>Get system settings</td>
+<td>获取系统设置</td>
 </tr>
 <tr>
 <td></td>
 <td>settings:manage</td>
-<td>Modify system configuration</td>
+<td>修改系统配置</td>
 </tr>
 <tr>
 <td></td>
 <td>settings:maintain</td>
-<td>Perform system maintenance tasks</td>
+<td>执行系统维护任务</td>
 </tr>
 </tbody>
 </table>
-<h2 id="list-roles">List roles<a class="headerlink" href="#list-roles" title="Permanent link">&para;</a></h2>
-<p>A list role is a collection of permissions assigned per list. Each list can be assigned a view (read) or manage (update) permission. List roles are attached to user accounts. Only the lists defined in a list role is accessible by the user, be it on the admin UI or via API calls. Do note that the <code>lists:get_all</code> and <code>lists:manage_all</code> permissions in user roles override all per-list permissions.</p>
-<h2 id="api-users">API users<a class="headerlink" href="#api-users" title="Permanent link">&para;</a></h2>
-<p>A user account can be of two types, a regular user or an API user. API users are meant for intertacting with the stmails APIs programmatically. Unlike regular user accounts that have custom passwords or OIDC for authentication, API users get an automatically generated secret token.</p>
+<h2 id="_3">列表角色<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>列表角色是每个列表分配的权限集合。每个列表可以被分配查看（读取）或管理（更新）权限。列表角色附加到用户账户。用户只能访问在列表角色中定义的列表，无论是在管理界面还是通过 API 调用。请注意，用户角色中的 <code>lists:get_all</code> 和 <code>lists:manage_all</code> 权限会覆盖所有每个列表的权限。</p>
+<h2 id="api">API 用户<a class="headerlink" href="#api" title="Permanent link">&para;</a></h2>
+<p>用户账户可以是两种类型之一：普通用户或 API 用户。API 用户用于以编程方式与 stmails API 交互。与具有自定义密码或 OIDC 身份验证的普通用户账户不同，API 用户会获得自动生成的密钥令牌。</p>
 
 
 

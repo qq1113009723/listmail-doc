@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.2afb09e1.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#messengers" class="md-skip">
+        <a href="#_1" class="md-skip">
           跳转至
         </a>
       
@@ -621,9 +621,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#messenger-implementations" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Messenger implementations
+      消息发送器实现
     </span>
   </a>
   
@@ -1041,9 +1041,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#messenger-implementations" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Messenger implementations
+      消息发送器实现
     </span>
   </a>
   
@@ -1065,12 +1065,12 @@
 
 
 
-<h1 id="messengers">Messengers<a class="headerlink" href="#messengers" title="Permanent link">&para;</a></h1>
-<p>stmails supports multiple custom messaging backends in additional to the default SMTP e-mail backend, enabling not just e-mail campaigns, but arbitrary message campaigns such as SMS, FCM notifications etc.</p>
-<p>A <em>Messenger</em> is a web service that accepts a campaign message pushed to it as a JSON request, which the service can in turn broadcast as SMS, FCM etc. Messengers are registered in the <em>Settings -&gt; Messengers</em> UI, and can be selected on individual campaigns.</p>
-<p>Messengers support optional BasicAuth authentication. <code>Plain text</code> format for campaign content is ideal for messengers such as SMS and FCM.</p>
-<p>When a campaign starts, stmails POSTs messages in the following format to the selected messenger's endpoint. The endpoint should return a <code>200 OK</code> response in case of a successful request.</p>
-<p>The address required to broadcast the message, for instance, a phone number or an FCM ID, is expected to be stored and relayed as <a href="../concepts/#attributes">subscriber attributes</a>. </p>
+<h1 id="_1">消息发送器<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>除了默认的 SMTP 电子邮件后端外，stmails 还支持多个自定义消息发送后端，不仅支持电子邮件活动，还支持任意消息活动，如 SMS、FCM 通知等。</p>
+<p><em>消息发送器</em>是一个 Web 服务，它接受作为 JSON 请求推送的活动消息，该服务可以将其作为 SMS、FCM 等广播。消息发送器在<em>设置 -&gt; 消息发送器</em> UI 中注册，可以在各个活动中选择。</p>
+<p>消息发送器支持可选的 BasicAuth 身份验证。对于 SMS 和 FCM 等消息发送器，活动内容的<code>纯文本</code>格式是理想的选择。</p>
+<p>当活动开始时，stmails 会以以下格式向选定的消息发送器端点发送 POST 请求。如果请求成功，端点应返回 <code>200 OK</code> 响应。</p>
+<p>广播消息所需的地址，例如电话号码或 FCM ID，应该作为<a href="../concepts/#attributes">订阅者属性</a>存储和传递。</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;subject&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Welcome to stmails&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The message body&quot;</span><span class="p">,</span>
@@ -1093,13 +1093,13 @@
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="messenger-implementations">Messenger implementations<a class="headerlink" href="#messenger-implementations" title="Permanent link">&para;</a></h2>
-<p>Following is a list of HTTP messenger servers that connect to various backends.</p>
+<h2 id="_2">消息发送器实现<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>以下是连接到各种后端的 HTTP 消息发送器服务器列表。</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Name</th>
-<th style="text-align: left;">Backend</th>
+<th style="text-align: left;">名称</th>
+<th style="text-align: left;">后端</th>
 </tr>
 </thead>
 <tbody>
