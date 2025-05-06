@@ -1,11 +1,11 @@
-# Integrating with external systems
+# 与外部系统集成
 
-In many environments, a mailing list manager's subscriber database is not run independently but as a part of an existing customer database or a CRM. There are multiple ways of keeping stmails in sync with external systems.
+在许多环境中，邮件列表管理器的订阅者数据库并不是独立运行的，而是作为现有客户数据库或 CRM 系统的一部分。有多种方法可以保持 stmails 与外部系统的同步。
 
-## Using APIs
+## 使用 API
 
-The [subscriber APIs](apis/subscribers.md) offers several APIs to manipulate the subscribers database, like addition, updation, and deletion. For bulk synchronisation, a CSV can be generated (and optionally zipped) and posted to the import API.
+[订阅者 API](apis/subscribers.md) 提供了多个用于操作订阅者数据库的 API，如添加、更新和删除。对于批量同步，可以生成 CSV 文件（可选择压缩）并通过导入 API 提交。
 
-## Interacting directly with the DB
+## 直接与数据库交互
 
-stmails uses tables with simple schemas to represent subscribers (`subscribers`), lists (`lists`), and subscriptions (`subscriber_lists`). It is easy to add, update, and delete subscriber information directly with the database tables for advanced usecases. See the [table schemas](https://github.com/knadh/stmails/blob/master/schema.sql) for more information.
+stmails 使用具有简单架构的表来表示订阅者（`subscribers`）、列表（`lists`）和订阅关系（`subscriber_lists`）。对于高级用例，可以直接通过数据库表添加、更新和删除订阅者信息。有关更多信息，请参阅[表结构](https://github.com/knadh/stmails/blob/master/schema.sql)。

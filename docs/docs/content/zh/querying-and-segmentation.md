@@ -1,24 +1,24 @@
-# Querying and segmenting subscribers
+# 查询和细分订阅者
 
-stmails allows the writing of partial Postgres SQL expressions to query, filter, and segment subscribers.
+stmails 允许编写部分 PostgreSQL SQL 表达式来查询、过滤和细分订阅者。
 
-## Database fields
+## 数据库字段
 
-These are the fields in the subscriber database that can be queried.
+以下是订阅者数据库中可查询的字段。
 
-| Field                    | Description                                                                                         |
+| 字段                    | 说明                                                                                         |
 | ------------------------ | --------------------------------------------------------------------------------------------------- |
-| `subscribers.uuid`       | The randomly generated unique ID of the subscriber                                                  |
-| `subscribers.email`      | E-mail ID of the subscriber                                                                         |
-| `subscribers.name`       | Name of the subscriber                                                                              |
-| `subscribers.status`     | Status of the subscriber (enabled, disabled, blocklisted)                                           |
-| `subscribers.attribs`    | Map of arbitrary attributes represented as JSON. Accessed via the `->` and `->>` Postgres operator. |
-| `subscribers.created_at` | Timestamp when the subscriber was first added                                                       |
-| `subscribers.updated_at` | Timestamp when the subscriber was modified                                                          |
+| `subscribers.uuid`       | 订阅者的随机生成唯一 ID                                                  |
+| `subscribers.email`      | 订阅者的电子邮件 ID                                                                         |
+| `subscribers.name`       | 订阅者的姓名                                                                              |
+| `subscribers.status`     | 订阅者的状态（启用、禁用、黑名单）                                           |
+| `subscribers.attribs`    | 以 JSON 表示的任意属性映射。通过 PostgreSQL 的 `->` 和 `->>` 运算符访问。 |
+| `subscribers.created_at` | 订阅者首次添加时的时间戳                                                       |
+| `subscribers.updated_at` | 订阅者被修改时的时间戳                                                          |
 
-## Sample attributes
+## 示例属性
 
-Here's a sample JSON map of attributes assigned to an imaginary subscriber.
+以下是一个虚构订阅者的属性 JSON 映射示例。
 
 ```json
 {
@@ -34,69 +34,63 @@ Here's a sample JSON map of attributes assigned to an imaginary subscriber.
 }
 ```
 
-![stmails screenshot](../images/edit-subscriber.png)
+![stmails 截图](../images/edit-subscriber.png)
 
-## Sample SQL query expressions
+## SQL 查询表达式示例
 
 ![stmails](../images/query-subscribers.png)
 
-#### Find a subscriber by e-mail
+#### 通过电子邮件查找订阅者
 
 ```sql
--- Exact match
+-- 精确匹配
 subscribers.email = 'some@domain.com'
 
--- Partial match to find e-mails that end in @domain.com.
+-- 部分匹配，查找以 @domain.com 结尾的电子邮件
 subscribers.email LIKE '%@domain.com'
-
 ```
 
-#### Find a subscriber by name
+#### 通过姓名查找订阅者
 
 ```sql
--- Find all subscribers whose name start with John.
+-- 查找所有名字以 John 开头的订阅者
 subscribers.email LIKE 'John%'
-
 ```
 
-#### Multiple conditions
+#### 多个条件
 
 ```sql
--- Find all Johns who have been blocklisted.
+-- 查找所有被加入黑名单的 John
 subscribers.email LIKE 'John%' AND status = 'blocklisted'
 ```
 
-#### Querying subscribers who viewed the campaign email
+#### 查询查看了活动邮件的订阅者
 
 ```sql
--- Find all subscribers who viewed the campaign email.
+-- 查找所有查看了活动邮件的订阅者
 EXISTS(SELECT 1 FROM campaign_views WHERE campaign_views.subscriber_id=subscribers.id AND campaign_views.campaign_id=<put_id_of_campaign>)
 ```
 
-#### Querying attributes
+#### 查询属性
 
 ```sql
--- The ->> operator returns the value as text. Find all subscribers
--- who live in Bengaluru and have done more than 3 projects.
--- Here 'projects' is cast into an integer so that we can apply the
--- numerical operator >
+-- ->> 运算符返回文本值。查找所有居住在 Bengaluru 且完成超过 3 个项目的订阅者
+-- 这里将 'projects' 转换为整数，以便我们可以应用数值运算符 >
 subscribers.attribs->>'city' = 'Bengaluru' AND
     (subscribers.attribs->>'projects')::INT > 3
 ```
 
-#### Querying nested attributes
+#### 查询嵌套属性
 
 ```sql
--- Find all blocklisted subscribers who like to drink tea, can code Python
--- and prefer coding Go.
+-- 查找所有被加入黑名单、喜欢喝茶、会编写 Python 代码且偏好 Go 编程的订阅者
 --
--- The -> operator returns the value as a structure. Here, the "languages" field
--- The ? operator checks for the existence of a value in a list.
+-- -> 运算符返回结构值。这里，"languages" 字段
+-- ? 运算符检查列表中是否存在某个值
 subscribers.status = 'blocklisted' AND
     (subscribers.attribs->>'likes_tea')::BOOLEAN = true AND
     subscribers.attribs->'stack'->'languages' ? 'python' AND
     subscribers.attribs->'stack'->>'preferred_language' = 'go'
-
 ```
 
-To learn how to write SQL expressions to do advancd querying on JSON attributes, refer to the Postgres [JSONB documentation](https://www.postgresql.org/docs/11/functions-json.html).
+要了解如何编写 SQL 表达式来对 JSON 属性进行高级查询，请参考 PostgreSQL 的 [JSONB 文档](https://www.postgresql.org/docs/11/functions-json.html)。

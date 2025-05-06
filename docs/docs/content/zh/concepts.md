@@ -2,10 +2,12 @@
 
 ## 订阅者
 
-订阅者是指通过电子邮件地址和姓名识别的接收者。订阅者会收到从 stmails 发送的电子邮件。一个订阅者可以添加到任意数量的列表中。未加入任何列表的订阅者被视为孤立记录。
+订阅者是通过电子邮件地址和姓名识别的收件人。订阅者接收从 stmails 发送的电子邮件。一个订阅者可以被添加到任意数量的列表中。不属于任何列表的订阅者被视为*孤立*记录。
+
 ### 属性
 
-属性是附加在订阅者身上的任意属性，除了电子邮件和姓名之外。它们还以 JSON 映射的形式表示。并非所有订阅者都需要具有属性。可以根据订阅者的属性查询和分段到不同的列表中，并将属性插入发送给他们的电子邮件中。例如：
+属性是附加到订阅者电子邮件和姓名之外的任意属性。它们以 JSON 映射的形式表示。并非所有订阅者都需要具有相同的属性。可以根据订阅者的属性对其进行[查询和细分](querying-and-segmentation.md)到列表中，并且这些属性可以插入到发送给他们的电子邮件中。例如：
+
 ```json
 {
   "city": "Bengaluru",
@@ -22,48 +24,46 @@
 
 ### 订阅状态
 
-订阅者可以被添加到一个或多个列表中，每个这样的关系可以具有这些状态之一。
+订阅者可以被添加到一个或多个列表中，每个这样的关系都可以具有以下状态之一。
 
-| 状态             | 说明                                                                                                                                                                                          |
-|----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `unconfirmed`  | 订阅者是在没有获得其明确确认的情况下直接被添加到列表中的。尽管如此，该订阅者仍会收到发送给 “单次确认式” 营销活动的营销活动信息。                                                                                                                          |
-| `confirmed`    | 订阅者通过点击确认电子邮件中的 “接受” 按钮来确认了他们的订阅。只有在选择加入列表中已确认的订阅者才会收到发送到该列表的营销活动信息。 |
-| `unsubscribed` | 该订阅者已从列表中退订，将不会收到发送至该列表的任何营销活动信息。                                                                                   
+| 状态           | 说明                                                                       |
+| ------------- | --------------------------------------------------------------------------------- |
+| `unconfirmed` | 订阅者被直接添加到列表中，没有经过他们的明确确认。尽管如此，订阅者仍将收到发送到单次确认活动的活动邮件。 |
+| `confirmed`   | 订阅者通过点击确认电子邮件中的"接受"来确认其订阅。只有确认列表中的已确认订阅者才会收到发送到该列表的活动邮件。                                       |
+| `unsubscribed` | 订阅者已从列表中取消订阅，将不会收到发送到该列表的任何活动邮件。
 
+### 细分
 
-### 分段
-
-分段是指根据任意条件（主要基于订阅者的属性），将大量的订阅者列表筛选成一个较小群体的过程。例如，如果需要向居住在某个特定城市的订阅者发送电子邮件（假设他们所在城市的信息在其属性中有描述)，那么就可以快速地将这些订阅者筛选出来，组成一个新的列表，然后向他们发送邮件。 [Learn more](querying-and-segmentation.md).
+细分是根据任意条件（主要是基于其属性）将大量订阅者过滤成较小组的过程。例如，如果需要向居住在特定城市的订阅者发送电子邮件，并且他们的城市在其属性中有所描述，则可以快速将他们过滤到新列表中并发送电子邮件。[了解更多](querying-and-segmentation.md)。
 
 ## 列表
 
-列表（或 “邮件列表”）是指一群订阅者的集合，这些订阅者归在一个名称之下，例如 “客户”。列表用于对订阅者进行组织管理，以及向特定的群体发送电子邮件。一个列表可以是 “单次确认式” 或 “双次确认式” 的。被添加到 “双次确认式” 列表中的订阅者必须通过点击他们所收到的确认电子邮件来明确接受订阅。在确认之前，他们不会收到营销活动的邮件信息。
-## 营销活动
+列表（或*邮件列表*）是在一个名称下分组的订阅者集合，例如*客户*。列表用于组织订阅者并向特定组发送电子邮件。列表可以是单次确认或双重确认。添加到双重确认列表的订阅者必须通过点击他们收到的确认电子邮件来明确接受订阅。在此之前，他们不会收到活动邮件。
 
-营销活动是指发送给一个或多个邮件列表的一封电子邮件（或任何其他类型的信息）。
+## 活动
 
+活动是发送到一个或多个列表的电子邮件（或任何其他类型的消息）。
 
-[//]: # (## 事物性消息)
+## 事务性消息
 
-[//]: # ()
-[//]: # (事务性消息是通过事务性消息应用程序编程接口（API）发送给订阅者的任意一种消息。例如，当用户注册一项服务时发送的欢迎电子邮件；用户购买商品时发送的订单确认电子邮件；当用户启动在线账户找回流程时发送的密码重置电子邮件。)
+事务性消息是使用事务性消息 API 发送给订阅者的任意消息。例如，注册服务时的欢迎电子邮件；购买商品时的订单确认电子邮件；用户启动在线账户恢复过程时的密码重置电子邮件。
 
 ## 模板
 
-模板是一种可重复使用的（HTML）设计，可用于各类营销活动。通常情况下，模板包含徽标和品牌元素的标准页眉和页脚区域，而营销活动的内容则插入到中间部分。stmails 支持您能够创建功能强大、动态的 HTML 模板 [Learn more](templating.md).
+模板是一种可重用的 HTML 设计，可用于活动和发送任意事务性消息。最常见的是，模板具有标准的页眉和页脚区域，包含徽标和品牌元素，活动内容插入在中间。stmails 支持 [Go 模板](https://gowebexamples.com/templates/) 表达式，让您可以创建强大的动态 HTML 模板。[了解更多](templating.md)。
 
-## Messenger
+## 消息发送器
 
-stmails supports multiple custom messaging backends in additional to the default SMTP e-mail backend, enabling not just e-mail campaigns, but arbitrary message campaigns such as SMS, FCM notifications etc. A *Messenger* is a web service that accepts a campaign message pushed to it as a JSON request, which the service can in turn broadcast as SMS, FCM etc. [Learn more](messengers.md).
+除了默认的 SMTP 电子邮件后端外，stmails 还支持多个自定义消息发送后端，不仅支持电子邮件活动，还支持任意消息活动，如 SMS、FCM 通知等。*消息发送器*是一个 Web 服务，它接受作为 JSON 请求推送的活动消息，该服务可以将其作为 SMS、FCM 等广播。[了解更多](messengers.md)。
 
-## Tracking pixel
+## 跟踪像素
 
-The tracking pixel is a tiny, invisible image that is inserted into an e-mail body to track e-mail views. This allows measuring the read rate of e-mails. While this is exceedingly common in e-mail campaigns, it carries privacy implications and should be used in compliance with rules and regulations such as GDPR. It is possible to track reads anonymously without associating an e-mail read to a subscriber.
+跟踪像素是一个微小的、不可见的图像，插入到电子邮件正文中以跟踪电子邮件查看。这允许测量电子邮件的阅读率。虽然这在电子邮件活动中非常常见，但它涉及隐私问题，应该遵守 GDPR 等规则和法规。可以匿名跟踪阅读，而不会将电子邮件阅读与订阅者关联起来。
 
-## Click tracking
+## 点击跟踪
 
-It is possible to track the clicks on every link that is sent in an e-mail. This allows measuring the clickthrough rates of links in e-mails. While this is exceedingly common in e-mail campaigns, it carries privacy implications and should be used in compliance with rules and regulations such as GDPR. It is possible to track link clicks anonymously without associating an e-mail read to a subscriber.
+可以跟踪电子邮件中发送的每个链接的点击。这允许测量电子邮件中链接的点击率。虽然这在电子邮件活动中非常常见，但它涉及隐私问题，应该遵守 GDPR 等规则和法规。可以匿名跟踪链接点击，而不会将电子邮件阅读与订阅者关联起来。
 
-## Bounce
+## 退信
 
-A bounce occurs when an e-mail that is sent to a recipient "bounces" back for one of many reasons including the recipient address being invalid, their mailbox being full, or the recipient's e-mail service provider marking the e-mail as spam. stmails can automatically process such bounce e-mails that land in a configured POP mailbox, or via APIs of SMTP e-mail providers such as AWS SES and Sengrid. Based on settings, subscribers returning bounced e-mails can either be blocklisted or deleted automatically. [Learn more](bounces.md).
+当发送给收件人的电子邮件因多种原因之一而"退回"时，就会发生退信，包括收件人地址无效、他们的邮箱已满，或收件人的电子邮件服务提供商将电子邮件标记为垃圾邮件。stmails 可以自动处理发送到配置的 POP 邮箱的退信电子邮件，或通过 AWS SES 和 Sengrid 等 SMTP 电子邮件提供商的 API。根据设置，返回退信电子邮件的订阅者可以被自动加入黑名单或删除。[了解更多](bounces.md)。

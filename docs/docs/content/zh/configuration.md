@@ -1,16 +1,16 @@
-# Configuration
+# 配置
 
-### TOML Configuration file
-One or more TOML files can be read by passing `--config config.toml` multiple times. Apart from a few low level configuration variables and the database configuration, all other settings can be managed from the `Settings` dashboard on the admin UI.
+### TOML 配置文件
+可以通过多次传递 `--config config.toml` 来读取一个或多个 TOML 文件。除了少数低级配置变量和数据库配置外，所有其他设置都可以从管理界面的 `设置` 仪表板中管理。
 
-To generate a new sample configuration file, run `--stmails --new-config`
+要生成新的示例配置文件，请运行 `--stmails --new-config`
 
-### Environment variables
-Variables in config.toml can also be provided as environment variables prefixed by `stmails_` with periods replaced by `__` (double underscore). To start stmails purely with environment variables without a configuration file, set the environment variables and pass the config flag as `--config=""`.
+### 环境变量
+config.toml 中的变量也可以通过环境变量提供，环境变量以 `stmails_` 为前缀，点号替换为 `__`（双下划线）。要仅使用环境变量而不使用配置文件启动 stmails，请设置环境变量并将配置标志传递为 `--config=""`。
 
-Example:
+示例：
 
-| **Environment variable**       | Example value  |
+| **环境变量**       | 示例值  |
 | ------------------------------ | -------------- |
 | `stmails_app__address`        | "0.0.0.0:9000" |
 | `stmails_db__host`            | db             |
@@ -20,49 +20,44 @@ Example:
 | `stmails_db__database`        | stmails       |
 | `stmails_db__ssl_mode`        | disable        |
 
+### 自定义系统模板
+请参阅[系统模板](templating.md#system-templates)。
 
-### Customizing system templates
-See [system templates](templating.md#system-templates).
+### HTTP 路由
+在配置身份验证代理和 Web 应用程序防火墙时，请使用此表。
 
+#### 私有管理端点。
 
-### HTTP routes
-When configuring auth proxies and web application firewalls, use this table.
-
-#### Private admin endpoints.
-
-| Methods | Route              | Description             |
+| 方法 | 路由              | 说明             |
 | ------- | ------------------ | ----------------------- |
-| `*`     | `/api/*`           | Admin APIs              |
-| `GET`   | `/admin/*`         | Admin UI and HTML pages |
-| `POST`  | `/webhooks/bounce` | Admin bounce webhook    |
+| `*`     | `/api/*`           | 管理 API              |
+| `GET`   | `/admin/*`         | 管理界面和 HTML 页面 |
+| `POST`  | `/webhooks/bounce` | 管理退信 webhook    |
 
+#### 暴露给互联网的公共端点。
 
-#### Public endpoints to expose to the internet.
-
-| Methods     | Route                 | Description                                   |
+| 方法     | 路由                 | 说明                                   |
 | ----------- | --------------------- | --------------------------------------------- |
-| `GET, POST` | `/subscription/*`     | HTML subscription pages                       |
-| `GET, `     | `/link/*`             | Tracked link redirection                      |
-| `GET`       | `/campaign/*`         | Pixel tracking image                          |
-| `GET`       | `/public/*`           | Static files for HTML subscription pages      |
-| `POST`      | `/webhooks/service/*` | Bounce webhook endpoints for AWS and Sendgrid |
-| `GET`       | `/uploads/*`          | The file upload path configured in media settings |
+| `GET, POST` | `/subscription/*`     | HTML 订阅页面                       |
+| `GET, `     | `/link/*`             | 跟踪链接重定向                      |
+| `GET`       | `/campaign/*`         | 像素跟踪图像                          |
+| `GET`       | `/public/*`           | HTML 订阅页面的静态文件      |
+| `POST`      | `/webhooks/service/*` | AWS 和 Sendgrid 的退信 webhook 端点 |
+| `GET`       | `/uploads/*`          | 媒体设置中配置的文件上传路径 |
 
+## 媒体上传
 
-## Media uploads
+#### 使用文件系统
 
-#### Using filesystem
+在配置 `docker` 卷挂载以使用文件系统媒体上传时，您可以采用以下两种方法之一。[如果您需要使用 `sudo` 执行 docker 命令，第二种选项可能是必要的](https://github.com/knadh/stmails/issues/1169#issuecomment-1674475945)。
 
-When configuring `docker` volume mounts for using filesystem media uploads, you can follow either of two approaches. [The second option may be necessary if](https://github.com/knadh/stmails/issues/1169#issuecomment-1674475945) your setup requires you to use `sudo` for docker commands. 
+进行任何更改后，您需要运行 `sudo docker compose stop ; sudo docker compose up`。
 
-After making any changes you will need to run `sudo docker compose stop ; sudo docker compose up`. 
+在 `https://stmails.mysite.com/admin/settings` 下，您输入 `/stmails/uploads`。
 
-And under `https://stmails.mysite.com/admin/settings` you put `/stmails/uploads`. 
+#### 使用卷
 
-#### Using volumes
-
-Using `docker volumes`, you can specify the name of volume and destination for the files to be uploaded inside the container.
-
+使用 `docker volumes`，您可以指定卷的名称和容器内要上传的文件的目标位置。
 
 ```yml
 app:
@@ -75,33 +70,33 @@ volumes:
   stmails-uploads:
 ```
 
-!!! note
+!!! 注意
 
-    This volume is managed by `docker` itself, and you can see find the host path with `docker volume inspect stmails_stmails-uploads`.
+    此卷由 `docker` 本身管理，您可以使用 `docker volume inspect stmails_stmails-uploads` 查看主机路径。
 
-#### Using bind mounts
+#### 使用绑定挂载
 
 ```yml
   app:
     volumes:
       - ./path/on/your/host/:/path/inside/container
 ```
-Eg:
+例如：
 ```yml
   app:
     volumes:
       - ./data/uploads:/stmails/uploads
 ```
-The files will be available inside `/data/uploads` directory on the host machine.
+文件将在主机上的 `/data/uploads` 目录中可用。
 
-To use the default `uploads` folder:
+要使用默认的 `uploads` 文件夹：
 ```yml
   app:
     volumes:
       - ./uploads:/stmails/uploads
 ```
 
-## Logs
+## 日志
 
 ### Docker
 
@@ -112,39 +107,37 @@ sudo docker logs stmails_app -t
 sudo docker logs stmails_db -t
 sudo docker logs --help
 ```
-Container info: `sudo docker inspect stmails_stmails`
+容器信息：`sudo docker inspect stmails_stmails`
 
-Docker logs to `/dev/stdout` and `/dev/stderr`. The logs are collected by the docker daemon and stored in your node's host path (by default). The same can be configured (/etc/docker/daemon.json) in your docker daemon settings to setup other logging drivers, logrotate policy and more, which you can read about [here](https://docs.docker.com/config/containers/logging/configure/).
+Docker 将日志输出到 `/dev/stdout` 和 `/dev/stderr`。日志由 docker 守护进程收集并存储在您节点的主机路径中（默认情况下）。可以在 docker 守护进程设置中配置相同的设置（/etc/docker/daemon.json）以设置其他日志驱动程序、logrotate 策略等，您可以[在此处](https://docs.docker.com/config/containers/logging/configure/)阅读更多信息。
 
-### Binary
+### 二进制
 
-stmails logs to `stdout`, which is usually not saved to any file. To save stmails logs to a file use `./stmails > stmails.log`.
+stmails 将日志输出到 `stdout`，通常不会保存到任何文件中。要将 stmails 日志保存到文件中，请使用 `./stmails > stmails.log`。
 
-Settings -> Logs in admin shows the last 1000 lines of the standard log output but gets erased when stmails is restarted.
+管理界面中的设置 -> 日志显示标准日志输出的最后 1000 行，但在 stmails 重启时会被清除。
 
-For the [service file](https://github.com/knadh/stmails/blob/master/stmails%40.service), you can use `ExecStart=/bin/bash -ce "exec /usr/bin/stmails --config /etc/stmails/config.toml --static-dir /etc/stmails/static >>/etc/stmails/stmails.log 2>&1"` to create a log file that persists after restarts. [More info](https://github.com/knadh/stmails/issues/1462#issuecomment-1868501606).
+对于[服务文件](https://github.com/knadh/stmails/blob/master/stmails%40.service)，您可以使用 `ExecStart=/bin/bash -ce "exec /usr/bin/stmails --config /etc/stmails/config.toml --static-dir /etc/stmails/static >>/etc/stmails/stmails.log 2>&1"` 创建一个在重启后仍然存在的日志文件。[更多信息](https://github.com/knadh/stmails/issues/1462#issuecomment-1868501606)。
 
+## 时区
 
-## Time zone
-
-To change stmails's time zone (logs, etc.) edit `docker-compose.yml`:
+要更改 stmails 的时区（日志等），请编辑 `docker-compose.yml`：
 ```
 environment:
     - TZ=Etc/UTC
 ```
-with any Timezone listed [here](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). Then run `sudo docker-compose stop ; sudo docker-compose up` after making changes.
+使用[此处](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)列出的任何时区。然后运行 `sudo docker-compose stop ; sudo docker-compose up`。
 
 ## SMTP
 
-### Retries
-The `Settings -> SMTP -> Retries` denotes the number of times a message that fails at the moment of sending is retried silently using different connections from the SMTP pool. The messages that fail even after retries are the ones that are logged as errors and ignored.
+### 重试
+`设置 -> SMTP -> 重试` 表示在发送时失败的消息使用 SMTP 池中的不同连接静默重试的次数。即使在重试后仍然失败的消息会被记录为错误并被忽略。
 
-## SMTP ports
-Some server hosts block outgoing SMTP ports (25, 465). You may have to contact your host to unblock them before being able to send e-mails. Eg: [Hetzner](https://docs.hetzner.com/cloud/servers/faq/#why-can-i-not-send-any-mails-from-my-server).
+## SMTP 端口
+某些服务器主机会阻止出站 SMTP 端口（25、465）。您可能需要联系您的主机以解除阻止，然后才能发送电子邮件。例如：[Hetzner](https://docs.hetzner.com/cloud/servers/faq/#why-can-i-not-send-any-mails-from-my-server)。
 
+## 性能
 
-## Performance
+### 批处理大小
 
-### Batch size
-
-The batch size parameter is useful when working with very large lists with millions of subscribers for maximising throughput. It is the number of subscribers that are fetched from the database sequentially in a single cycle (~5 seconds) when a campaign is running. Increasing the batch size uses more memory, but reduces the round trip to the database.
+批处理大小参数在处理具有数百万订阅者的非常大的列表时非常有用，可以最大化吞吐量。它是在活动运行时从数据库中顺序获取的订阅者数量（约 5 秒一个周期）。增加批处理大小会使用更多内存，但会减少到数据库的往返次数。

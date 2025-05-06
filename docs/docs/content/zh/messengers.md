@@ -1,14 +1,14 @@
-# Messengers
+# 消息发送器
 
-stmails supports multiple custom messaging backends in additional to the default SMTP e-mail backend, enabling not just e-mail campaigns, but arbitrary message campaigns such as SMS, FCM notifications etc.
+除了默认的 SMTP 电子邮件后端外，stmails 还支持多个自定义消息发送后端，不仅支持电子邮件活动，还支持任意消息活动，如 SMS、FCM 通知等。
 
-A *Messenger* is a web service that accepts a campaign message pushed to it as a JSON request, which the service can in turn broadcast as SMS, FCM etc. Messengers are registered in the *Settings -> Messengers* UI, and can be selected on individual campaigns.
+*消息发送器*是一个 Web 服务，它接受作为 JSON 请求推送的活动消息，该服务可以将其作为 SMS、FCM 等广播。消息发送器在*设置 -> 消息发送器* UI 中注册，可以在各个活动中选择。
 
-Messengers support optional BasicAuth authentication. `Plain text` format for campaign content is ideal for messengers such as SMS and FCM.
+消息发送器支持可选的 BasicAuth 身份验证。对于 SMS 和 FCM 等消息发送器，活动内容的`纯文本`格式是理想的选择。
 
-When a campaign starts, stmails POSTs messages in the following format to the selected messenger's endpoint. The endpoint should return a `200 OK` response in case of a successful request.
+当活动开始时，stmails 会以以下格式向选定的消息发送器端点发送 POST 请求。如果请求成功，端点应返回 `200 OK` 响应。
 
-The address required to broadcast the message, for instance, a phone number or an FCM ID, is expected to be stored and relayed as [subscriber attributes](concepts.md/#attributes). 
+广播消息所需的地址，例如电话号码或 FCM ID，应该作为[订阅者属性](concepts.md/#attributes)存储和传递。
 
 ```json
 {
@@ -34,11 +34,11 @@ The address required to broadcast the message, for instance, a phone number or a
 }
 ```
 
-## Messenger implementations
+## 消息发送器实现
 
-Following is a list of HTTP messenger servers that connect to various backends.
+以下是连接到各种后端的 HTTP 消息发送器服务器列表。
 
-| Name                                                                                 | Backend          |
+| 名称                                                                                 | 后端          |
 |:-------------------------------------------------------------------------------------|:-----------------|
 | [stmails-messenger](https://github.com/joeirimpan/stmails-messenger)               | AWS Pinpoint SMS |
 | [stmails-verimor-gateway](https://github.com/antandros/stmails-verimor-gateway)    | Verimor          |
