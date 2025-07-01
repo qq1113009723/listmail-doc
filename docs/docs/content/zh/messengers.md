@@ -33,15 +33,3 @@
 	}
 }
 ```
-
-## 消息发送器实现
-
-以下是连接到各种后端的 HTTP 消息发送器服务器列表。
-
-| 名称                                                                                 | 后端          |
-|:-------------------------------------------------------------------------------------|:-----------------|
-| [stmails-messenger](https://github.com/joeirimpan/stmails-messenger)               | AWS Pinpoint SMS |
-| [stmails-verimor-gateway](https://github.com/antandros/stmails-verimor-gateway)    | Verimor          |
-| [stmails-mailersend](https://github.com/tkawczynski/stmails-mailersend)            | Mailersend       |
-| [stmails-novu-messenger](https://github.com/Codepowercode/stmails-novu-messenger)  | Novu             |
-| [stmails-push-messenger](https://github.com/shyamkrishna21/stmails-push-messenger) | Google FCM       |

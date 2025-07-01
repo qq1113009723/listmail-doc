@@ -132,10 +132,6 @@ stmails 集成了 Sprig 库，提供了 100 多个用于处理字符串、数字
 ## 系统模板
 系统模板用于渲染面向用户的公共页面，如订阅管理页面，以及自动生成的系统电子邮件，如确认订阅的电子邮件。这些都捆绑在 stmails 中，但可以通过在本地复制[静态目录](https://github.com/knadh/stmails/tree/master/static)并使用 `./stmails --static-dir=your/custom/path` 标志将其路径传递给 stmails 来自定义。
 
-您可以使用以下命令获取静态文件：<br>
-`mkdir -p /home/ubuntu/stmails/static ; wget -O - https://github.com/knadh/stmails/archive/master.tar.gz | tar xz -C /home/ubuntu/stmails/static --strip=2 "stmails-master/static"`
-
-[Docker 示例](https://yasoob.me/posts/setting-up-stmails-opensource-newsletter-mailing/#custom-static-files)，[二进制示例](https://github.com/knadh/stmails/blob/master/stmails-simple.service)。
 
 ### 公共页面
 
@@ -150,7 +146,7 @@ stmails 集成了 Sprig 库，提供了 100 多个用于处理字符串、数字
 
 要使用 CSS 和 Javascript 编辑公共页面的外观，请转到设置 > 外观 > 公共：
 
-![image](https://user-images.githubusercontent.com/55474996/153739792-93074af6-d1dd-40aa-8cde-c02ea4bbb67b.png)
+![image](../images/system_style.png)
 
 ### 系统电子邮件
 
