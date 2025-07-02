@@ -1,10 +1,10 @@
 # Introduction
 
-[![stmails](../images/logo.svg)](https://app.stmails.cn)
+[![stmails](../images/logo.png)](https://app.stmails.cn)
+<!-- <img src=images/logo.png stype="zoom: 33%"> -->
+stmails is a self-hosted, high performance one-way mailing list and newsletter manager.
 
-stmails is a self-hosted, high performance one-way mailing list and newsletter manager. It comes as a standalone binary and the only dependency is a Postgres database.
-
-[![stmails screenshot](https://user-images.githubusercontent.com/547147/134939475-e0391111-f762-44cb-b056-6cb0857755e3.png)](https://app.stmails.cn)
+[![stmails screenshot](../images/index_campaign.png)](https://app.stmails.cn)
 
 [//]: # (## Developers)
 

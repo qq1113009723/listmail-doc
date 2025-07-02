@@ -1,17 +1,15 @@
 # Installation
 
-stmails is a simple binary application that requires a Postgres database instance to run. The binary can be downloaded and run manually, or it can be run as a container with Docker compose.
+stmails is a simple binary application.
 
-## Binary
+## Binary Installation
 1. Download the [latest release](https://github.com/knadh/stmails/releases) and extract the stmails binary. `amd64` is the main one. It works for Intel and x86 CPUs.
-1. `./stmails --new-config` to generate config.toml. Edit the file.
-1. `./stmails --install` to install the tables in the Postgres DB (⩾ 12).
-1. Run `./stmails` and visit `http://localhost:9000` to create the Super Admin user and login.
-
-!!! Tip
-    To set the Super Admin username and password during installation, set the environment variables:
-    `stmails_ADMIN_USER=myuser stmails_ADMIN_PASSWORD=xxxxx ./stmails --install`
-
+2. **Important:** Set your license key in the config.toml file. This is required to run the application.
+   ```toml
+   [app]
+   license_key = "YOUR_LICENSE_KEY"
+   ```
+3. Run `./stmails` and visit `http://localhost:9000` to create the Super Admin user and login.
 
 ## Docker
 
