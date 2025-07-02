@@ -8,9 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://app.stmails.cn/docs/maintenance/performance/">
+        <link rel="canonical" href="https://app.stmails.cn/docs/gstart/mailbox-configuration/">
       
       
+        <link rel="prev" href="../../installation/">
+      
+      
+        <link rel="next" href="../subscriber-management/">
       
       
       <link rel="icon" href="../../images/favicon.png">
@@ -18,7 +22,7 @@
     
     
       
-        <title>Performance - stmails / 文档</title>
+        <title>邮箱配置 - stmails / 文档</title>
       
     
     
@@ -72,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#performance" class="md-skip">
+        <a href="#_1" class="md-skip">
           跳转至
         </a>
       
@@ -107,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Performance
+              邮箱配置
             
           </span>
         </div>
@@ -254,8 +258,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -276,11 +282,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -296,7 +302,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             快速开始
@@ -330,10 +336,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../gstart/mailbox-configuration/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    邮箱配置
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -344,6 +372,92 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      发信邮箱配置
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="发信邮箱配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#163" class="md-nav__link">
+    <span class="md-ellipsis">
+      163发信
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qq" class="md-nav__link">
+    <span class="md-ellipsis">
+      qq发信
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      退信邮箱配置
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="退信邮箱配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#163_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      163退信
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qq_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      qq退信
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -356,7 +470,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gstart/subscriber-management/" class="md-nav__link">
+      <a href="../subscriber-management/" class="md-nav__link">
         
   
   
@@ -379,7 +493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gstart/send-first-campaign/" class="md-nav__link">
+      <a href="../send-first-campaign/" class="md-nav__link">
         
   
   
@@ -681,20 +795,68 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#slow-query-caching" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Slow query caching
+      发信邮箱配置
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="发信邮箱配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#163" class="md-nav__link">
+    <span class="md-ellipsis">
+      163发信
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#vacuum-ing" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#qq" class="md-nav__link">
     <span class="md-ellipsis">
-      VACUUM-ing
+      qq发信
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      退信邮箱配置
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="退信邮箱配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#163_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      163退信
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qq_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      qq退信
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -714,19 +876,69 @@
 
 
 
-<h1 id="performance">Performance<a class="headerlink" href="#performance" title="Permanent link">&para;</a></h1>
-<p>stmails is built to be highly performant and can handle millions of subscribers with minimal system resources.</p>
-<p>However, as the Postgres database grows—with a large number of subscribers, campaign views, and click records—it can significantly slow down certain aspects of the program, particularly in counting records and aggregating various statistics. For instance, loading admin pages that do these aggregations can take tens of seconds if the database has millions of subscribers.</p>
-<ul>
-<li>Aggregate counts, statistics, and charts on the landing dashboard.</li>
-<li>Subscriber count beside every list on the Lists page.</li>
-<li>Total subscriber count on the Subscribers page.</li>
-</ul>
-<p>However, at that scale, viewing the exact number of subscribers or statistics every time the admin panel is accessed becomes mostly unnecessary. On installations with millions of subscribers, where the above pages do not load instantly, it is highly recommended to turn on the <code>Settings -&gt; Performance -&gt; Cache slow database queries</code> option.</p>
-<h2 id="slow-query-caching">Slow query caching<a class="headerlink" href="#slow-query-caching" title="Permanent link">&para;</a></h2>
-<p>When this option is enabled, the subscriber counts on the Lists page, the Subscribers page, and the statistics on the dashboard, etc., are no longer counted in real-time in the database. Instead, they are updated periodically and cached, resulting in a massive performance boost. The periodicity can be configured on the Settings -&gt; Performance page using a standard crontab expression (default: <code>0 3 * * *</code>, which means 3 AM daily). Use a tool like <a href="https://crontab.guru">crontab.guru</a> for easily generating a desired crontab expression.</p>
-<h2 id="vacuum-ing">VACUUM-ing<a class="headerlink" href="#vacuum-ing" title="Permanent link">&para;</a></h2>
-<p>Running <a href="https://www.postgresql.org/docs/current/sql-vacuum.html"><code>VACUUM ANALYZE</code></a> on large Postgres databases at regular intervals (for instance, once a week), is recommended. It reclaims disk space and improves Postgres' query performance. Do note that this is a blocking operation and all database queries can come to a stand-still on a large database while the operation is running (generally only a few seconds).</p>
+<h1 id="_1">邮箱配置<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2">发信邮箱配置<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>在<code>设置 -&gt; SMTP服务器</code>下配置发信服务器。</p>
+<h3 id="163">163发信<a class="headerlink" href="#163" title="Permanent link">&para;</a></h3>
+<ol>
+<li>登陆<a href="https://mail.163.com">163邮箱</a>，在<code>设置 -&gt; POP3/SMTP/IMAP</code>下开启<code>IMAP/SMTP服务</code>和<code>POP3/SMTP</code>服务。在授权密码管理下新增一个授权密码，并保存。
+<img alt="163设置" src="../images/mailbox/163_code.png" /></li>
+<li>
+<p>打开stmails找到<code>设置 -&gt; SMTP服务器</code>下启用一个SMTP发信服务器。填写表单并保存</p>
+<blockquote>
+<p>主机：smtp.163.com </p>
+<p>端口: 25 </p>
+<p>身份验证协议：PLAIN </p>
+<p>用户名：你自己的163邮箱号 </p>
+<p>密码：163邮箱的授权码 </p>
+<p>TLS协议：STARTTLS </p>
+</blockquote>
+<p><img alt="stmails设置163" src="../images/mailbox/163_cfg.png" /></p>
+</li>
+</ol>
+<h3 id="qq">qq发信<a class="headerlink" href="#qq" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>登陆<a href="https://mail.qq.com">qq邮箱</a>，在<code>设置 -&gt; 账号 -&gt; POP3/IMAP/SMTP/Exchange/CardDAV/CalDAV服务</code>下开启服务，生成授权密码，并保存。
+<img alt="qq邮箱设置" src="../images/mailbox/qq_code.png" /></p>
+</li>
+<li>
+<p>打开stmails找到<code>设置 -&gt; SMTP服务器</code>下启用一个SMTP发信服务器。填写表单并保存</p>
+<blockquote>
+<p>主机：smtp.qq.com </p>
+<p>端口: 25 </p>
+<p>身份验证协议：PLAIN </p>
+<p>用户名：你自己的qq邮箱号 </p>
+<p>密码：qq邮箱的授权码 </p>
+<p>TLS协议：STARTTLS </p>
+</blockquote>
+<p><img alt="stmails设置qq邮箱" src="../images/mailbox/qq_cfg.png" /></p>
+</li>
+</ol>
+<h2 id="_3">退信邮箱配置<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>在<code>设置 -&gt; 反弹</code>下配置退回邮箱</p>
+<h3 id="163_1">163退信<a class="headerlink" href="#163_1" title="Permanent link">&para;</a></h3>
+<p>打开stmails找到<code>设置 -&gt; 反弹</code>下启用邮件回弹功能。填写表单并保存</p>
+<blockquote>
+<p>主机：pop.163.com </p>
+<p>端口: 995 </p>
+<p>身份验证协议：userpass </p>
+<p>用户名：你自己的163邮箱号 </p>
+<p>密码：163邮箱的授权码 </p>
+<p>TLS协议：启用 </p>
+</blockquote>
+<p><img alt="stmails设置回弹163邮箱" src="../images/mailbox/bounce_163.png" /></p>
+<h3 id="qq_1">qq退信<a class="headerlink" href="#qq_1" title="Permanent link">&para;</a></h3>
+<p>打开stmails找到<code>设置 -&gt; 反弹</code>下启用邮件回弹功能。填写表单并保存</p>
+<blockquote>
+<p>主机：pop.qq.com </p>
+<p>端口: 995 </p>
+<p>身份验证协议：userpass </p>
+<p>用户名：你自己的qq邮箱号 </p>
+<p>密码：qq邮箱的授权码 </p>
+<p>TLS协议：启用 </p>
+</blockquote>
+<p><img alt="stmails设置回弹qq邮箱" src="../images/mailbox/bounce_qq.png" /></p>
 
 
 
